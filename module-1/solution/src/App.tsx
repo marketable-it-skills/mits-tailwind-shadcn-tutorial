@@ -12,9 +12,7 @@ function App() {
         </p>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
-
-
+export default App;

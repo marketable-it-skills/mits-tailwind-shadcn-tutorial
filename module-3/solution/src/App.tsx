@@ -12,8 +12,8 @@ function App() {
         <p className="mt-4 text-sm text-gray-600 leading-relaxed line-clamp-3">
           Create a server-side rendered administrative interface for SkillShare
           Academy platform management with role-based access control and OWASP
-          security compliance. This comprehensive system allows restaurant owners
-          to manage all aspects of their business efficiently.
+          security compliance. This comprehensive system allows restaurant
+          owners to manage all aspects of their business efficiently.
         </p>
       </div>
 
@@ -28,8 +28,8 @@ function App() {
         <p className="mt-4 text-sm text-slate-300 leading-relaxed line-clamp-3">
           Create a server-side rendered administrative interface for SkillShare
           Academy platform management with role-based access control and OWASP
-          security compliance. This comprehensive system allows restaurant owners
-          to manage all aspects of their business efficiently.
+          security compliance. This comprehensive system allows restaurant
+          owners to manage all aspects of their business efficiently.
         </p>
       </div>
 
@@ -44,8 +44,8 @@ function App() {
         <p className="mt-4 text-sm text-blue-700 leading-relaxed line-clamp-3">
           Create a server-side rendered administrative interface for SkillShare
           Academy platform management with role-based access control and OWASP
-          security compliance. This comprehensive system allows restaurant owners
-          to manage all aspects of their business efficiently.
+          security compliance. This comprehensive system allows restaurant
+          owners to manage all aspects of their business efficiently.
         </p>
       </div>
     </div>

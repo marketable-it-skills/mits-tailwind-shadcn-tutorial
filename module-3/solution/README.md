@@ -40,18 +40,21 @@ Three cards with refined typography showing clear visual hierarchy:
 ## Typography Specifications
 
 ### Title
+
 - **Size**: `text-2xl` (24px / 1.5rem)
 - **Weight**: `font-bold` (700)
 - **Line Height**: `leading-tight` (1.25)
 - **Purpose**: Grab attention, identify the module
 
 ### Subtitle
+
 - **Size**: `text-base` (16px / 1rem)
 - **Weight**: `font-semibold` (600)
 - **Spacing**: `mt-2` (8px top margin - close to title)
 - **Purpose**: Provide context, secondary identification
 
 ### Description
+
 - **Size**: `text-sm` (14px / 0.875rem)
 - **Line Height**: `leading-relaxed` (1.625)
 - **Truncation**: `line-clamp-3` (max 3 lines with ellipsis)
@@ -60,17 +63,18 @@ Three cards with refined typography showing clear visual hierarchy:
 
 ## Spacing System
 
-| Element | Spacing | Purpose |
-|---------|---------|---------|
-| Card Padding | `p-8` (32px) | More breathing room than p-6 |
-| Title → Subtitle | `mt-2` (8px) | Keep grouped together |
-| Subtitle → Description | `mt-4` (16px) | Clear visual separation |
+| Element                | Spacing       | Purpose                      |
+| ---------------------- | ------------- | ---------------------------- |
+| Card Padding           | `p-8` (32px)  | More breathing room than p-6 |
+| Title → Subtitle       | `mt-2` (8px)  | Keep grouped together        |
+| Subtitle → Description | `mt-4` (16px) | Clear visual separation      |
 
 ## Key Learning Points
 
 ### Visual Hierarchy
 
 Three levels of importance:
+
 1. **Primary** (Title): Largest, boldest, tight spacing
 2. **Secondary** (Subtitle): Medium size, semi-bold
 3. **Tertiary** (Description): Smallest, relaxed, muted
@@ -84,6 +88,7 @@ Three levels of importance:
 ### Text Truncation
 
 `line-clamp-3` provides:
+
 - Consistent card heights
 - No overflow issues
 - Automatic ellipsis (...)
@@ -94,6 +99,7 @@ Three levels of importance:
 ### `src/App.tsx`
 
 Changes applied to all three cards:
+
 - Increased padding: `p-6` → `p-8`
 - Larger titles: `text-xl` → `text-2xl`
 - Added `leading-tight` to titles
@@ -125,6 +131,7 @@ Try these variations:
 ## Next Module
 
 Continue to **Module 4: Introducing ShadCN UI** where we'll:
+
 - Install a component library
 - See how libraries abstract these patterns
 - Replace hand-built cards with ShadCN components

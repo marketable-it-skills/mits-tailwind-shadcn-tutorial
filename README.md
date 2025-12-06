@@ -5,6 +5,7 @@ A hands-on, step-by-step tutorial for learning **Tailwind CSS** and **ShadCN UI*
 ## 🎯 What You'll Build
 
 A responsive MITS Project Dashboard that displays project cards with:
+
 - Multiple color themes (light, dark, colored accents)
 - Professional typography hierarchy
 - Responsive grid layout
@@ -23,23 +24,23 @@ A responsive MITS Project Dashboard that displays project cards with:
 
 ### Completed Modules
 
-| Module | Focus | What You'll Learn |
-|--------|-------|-------------------|
+| Module                  | Focus                      | What You'll Learn                                                         |
+| ----------------------- | -------------------------- | ------------------------------------------------------------------------- |
 | [Module 1](./module-1/) | Project Setup & First Card | Vite setup, Tailwind v4 configuration, basic card component, Git workflow |
-| [Module 2](./module-2/) | Color Exploration | Tailwind color system, light/dark/colored themes, responsive layout |
-| [Module 3](./module-3/) | Typography & Spacing | Font sizes, weights, line heights, text hierarchy, spacing utilities |
+| [Module 2](./module-2/) | Color Exploration          | Tailwind color system, light/dark/colored themes, responsive layout       |
+| [Module 3](./module-3/) | Typography & Spacing       | Font sizes, weights, line heights, text hierarchy, spacing utilities      |
 
 ### Upcoming Modules
 
-| Module | Focus | Status |
-|--------|-------|--------|
-| Module 4 | Introducing ShadCN UI | Planned |
-| Module 5 | Badges & Tags | Planned |
-| Module 6 | Card Interactions | Planned |
-| Module 7 | Grid Layout | Planned |
-| Module 8 | Component Props | Planned |
-| Module 9 | Real Data Loading | Planned |
-| Module 10 | Theme Toggle | Planned |
+| Module    | Focus                 | Status  |
+| --------- | --------------------- | ------- |
+| Module 4  | Introducing ShadCN UI | Planned |
+| Module 5  | Badges & Tags         | Planned |
+| Module 6  | Card Interactions     | Planned |
+| Module 7  | Grid Layout           | Planned |
+| Module 8  | Component Props       | Planned |
+| Module 9  | Real Data Loading     | Planned |
+| Module 10 | Theme Toggle          | Planned |
 
 ## 🎓 Learning Philosophy
 
@@ -64,12 +65,14 @@ This tutorial follows a **UI-first, visual-first approach**:
 ### Quick Start
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/marketable-it-skills/mits-tailwind-shadcn-tutorial.git
    cd mits-tailwind-shadcn-tutorial
    ```
 
 2. **Start with Module 1:**
+
    - Read [`module-1/overview.md`](./module-1/overview.md)
    - Follow [`module-1/workshop.md`](./module-1/workshop.md)
    - Check your solution against `module-1/solution/`
@@ -131,4 +134,3 @@ For questions or support, please open an issue in this repository.
 ---
 
 **Part of the [Marketable IT Skills (MITS)](https://github.com/marketable-it-skills) initiative** 🚀
-
