@@ -85,12 +85,13 @@ ShadCN UI will help us build the complete card system specified in the PRD more 
 ## Module Structure
 
 1. **Task 1**: Understand component libraries
-2. **Task 2**: Install ShadCN UI
-3. **Task 3**: Add Card component
-4. **Task 4**: Replace light card with ShadCN
-5. **Task 5**: Update all cards
-6. **Task 6**: Compare and reflect
-7. **Task 7**: Commit your work
+2. **Task 2**: Prepare for ShadCN (install @types/node, configure path aliases)
+3. **Task 3**: Install ShadCN UI
+4. **Task 4**: Add Card component
+5. **Task 5**: Replace light card with ShadCN
+6. **Task 6**: Update all cards
+7. **Task 7**: Compare and reflect
+8. **Task 8**: Commit your work
 
 ## Expected Result
 
