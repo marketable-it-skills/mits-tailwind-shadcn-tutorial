@@ -10,6 +10,12 @@ Refine the typography and text hierarchy of your cards to create a more professi
 
 Before you begin, make sure you have completed **Module 2** and your app shows three color-themed cards.
 
+### Start a New Feature Branch
+
+```bash
+git checkout -b feat/module-3-typography
+```
+
 ---
 
 ## Task 1: Understanding Tailwind's Typography System
@@ -339,6 +345,24 @@ Here's how the complete light card should look:
 
 ---
 
+---
+
+## Task 7: Commit Your Work
+
+Save your typography enhancements:
+
+```bash
+git add .
+git commit -m "feat: enhance typography with hierarchy and spacing"
+
+# Merge to main and push
+git checkout main
+git merge feat/module-3-typography
+git push
+```
+
+---
+
 ## 🎉 Congratulations!
 
 You've completed Module 3! Your cards now have:
@@ -349,6 +373,7 @@ You've completed Module 3! Your cards now have:
 4. ✅ Readable descriptions with proper line height
 5. ✅ Text truncation for long content
 6. ✅ Perfect spacing throughout
+7. ✅ Changes saved with Git
 
 ## Typography Best Practices
 

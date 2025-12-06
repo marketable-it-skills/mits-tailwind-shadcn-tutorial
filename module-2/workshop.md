@@ -10,6 +10,16 @@ Create three card variations with different color themes to understand Tailwind'
 
 Before you begin, make sure you have completed **Module 1** and your app shows a single centered card.
 
+### Start a New Feature Branch
+
+Let's start Module 2 with proper version control:
+
+```bash
+git checkout -b feat/module-2-color-exploration
+```
+
+> **Reminder**: We'll commit and merge at the end of the module.
+
 ---
 
 ## Task 1: Understanding Tailwind's Color System
@@ -307,6 +317,27 @@ Try this **bad** example to understand contrast:
 
 ---
 
+---
+
+## Task 7: Commit Your Work
+
+Now that you've completed the color exploration, let's save your work:
+
+```bash
+# Stage and commit
+git add .
+git commit -m "feat: add color exploration with light, dark, and colored cards"
+
+# Merge to main and push
+git checkout main
+git merge feat/module-2-color-exploration
+git push
+```
+
+> **Note**: Since you set up the upstream in Module 1, you can now just use `git push`!
+
+---
+
 ## 🎉 Congratulations!
 
 You've completed Module 2! You now understand:
@@ -316,6 +347,7 @@ You've completed Module 2! You now understand:
 3. ✅ Color contrast and readability principles
 4. ✅ Responsive layout with flexbox
 5. ✅ How to experiment with different color combinations
+6. ✅ Continuing professional Git workflow
 
 ## Color Contrast Rules (Accessibility)
 
