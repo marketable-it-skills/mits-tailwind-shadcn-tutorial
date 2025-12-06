@@ -271,11 +271,11 @@ Your browser should now display a beautiful card with:
 
 ---
 
-## Task 7: Version Control with Git & GitHub
+## Task 6: Version Control with Git & GitHub
 
 Let's set up version control for your project using Git and GitHub. This is a professional practice that helps you track changes and collaborate with others.
 
-### Step 7.1: Initialize Git Repository
+### Step 6.1: Initialize Git Repository
 
 In your project folder, initialize a Git repository:
 
@@ -285,7 +285,7 @@ git init
 
 This creates a `.git` folder that tracks your project's history.
 
-### Step 7.2: Create .gitignore
+### Step 6.2: Create .gitignore
 
 Create a `.gitignore` file in your project root to exclude files that shouldn't be tracked:
 
@@ -318,7 +318,7 @@ npm-debug.log*
 
 > **Why?** The `.gitignore` file prevents large dependencies and generated files from being tracked in Git.
 
-### Step 7.3: Create a Feature Branch
+### Step 6.3: Create a Feature Branch
 
 Create and switch to a feature branch for your work:
 
@@ -328,7 +328,7 @@ git checkout -b feat/module-1-workshop
 
 > **Best Practice**: Use descriptive branch names like `feat/module-1-workshop` for features, `fix/bug-name` for fixes.
 
-### Step 7.4: Stage and Commit Your Work
+### Step 6.4: Stage and Commit Your Work
 
 Add all your files to staging:
 
@@ -355,13 +355,13 @@ git commit -m "feat: complete module 1 - setup project with Tailwind and basic c
 > - `docs:` for documentation
 > - `style:` for formatting
 
-### Step 7.5: Switch to Main Branch
+### Step 6.5: Switch to Main Branch
 
 ```bash
 git checkout main
 ```
 
-### Step 7.6: Merge Feature Branch
+### Step 6.6: Merge Feature Branch
 
 Merge your feature branch into main:
 
@@ -371,7 +371,7 @@ git merge feat/module-1-workshop
 
 This brings your changes from the feature branch into the main branch.
 
-### Step 7.7: Create GitHub Repository
+### Step 6.7: Create GitHub Repository
 
 1. Go to [GitHub.com](https://github.com) and sign in
 2. Click the **+** icon (top right) → **New repository**
@@ -380,7 +380,7 @@ This brings your changes from the feature branch into the main branch.
 5. **Do NOT** initialize with README, .gitignore, or license
 6. Click **Create repository**
 
-### Step 7.8: Add Remote and Push
+### Step 6.8: Add Remote and Push
 
 GitHub will show you commands. Run these in your terminal:
 
@@ -406,13 +406,13 @@ Replace `YOUR-USERNAME` with your actual GitHub username.
 
 > **Note**: Some developers prefer to just use `git push` without `-u` for the first time too, but you'll need to specify `origin main` each time. Using `-u` once saves typing later!
 
-### Step 7.9: Verify on GitHub
+### Step 6.9: Verify on GitHub
 
 1. Refresh your GitHub repository page
 2. You should see all your files
 3. Check that `node_modules` and `dist` are NOT there (thanks to `.gitignore`!)
 
-### Step 7.10: Understanding the Git Workflow
+### Step 6.10: Understanding the Git Workflow
 
 Here's what you just learned:
 
