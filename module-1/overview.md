@@ -85,6 +85,8 @@ Before starting this module, ensure you have:
 
 - **Node.js** (v18 or higher) - [Download here](https://nodejs.org/)
 - **npm** (comes with Node.js)
+- **Git** - [Download here](https://git-scm.com/)
+- A **GitHub account** - [Sign up here](https://github.com)
 - A **code editor** (VS Code recommended)
 - Basic knowledge of **HTML, CSS, and JavaScript**
 - Familiarity with **React basics** (components, JSX)
@@ -100,6 +102,7 @@ Before starting this module, ensure you have:
 3. **Task 3**: Clean up default files
 4. **Task 4**: Create a simple centered card
 5. **Task 5**: Style the card with Tailwind classes
+6. **Task 6**: Set up version control with Git & GitHub
 
 ## Expected Result
 

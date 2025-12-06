@@ -271,6 +271,163 @@ Your browser should now display a beautiful card with:
 
 ---
 
+## Task 7: Version Control with Git & GitHub
+
+Let's set up version control for your project using Git and GitHub. This is a professional practice that helps you track changes and collaborate with others.
+
+### Step 7.1: Initialize Git Repository
+
+In your project folder, initialize a Git repository:
+
+```bash
+git init
+```
+
+This creates a `.git` folder that tracks your project's history.
+
+### Step 7.2: Create .gitignore
+
+Create a `.gitignore` file in your project root to exclude files that shouldn't be tracked:
+
+```
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Environment files
+.env
+.env.local
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+```
+
+> **Why?** The `.gitignore` file prevents large dependencies and generated files from being tracked in Git.
+
+### Step 7.3: Create a Feature Branch
+
+Create and switch to a feature branch for your work:
+
+```bash
+git checkout -b feat/module-1-workshop
+```
+
+> **Best Practice**: Use descriptive branch names like `feat/module-1-workshop` for features, `fix/bug-name` for fixes.
+
+### Step 7.4: Stage and Commit Your Work
+
+Add all your files to staging:
+
+```bash
+git add .
+```
+
+Check what will be committed:
+
+```bash
+git status
+```
+
+Commit your work with a descriptive message:
+
+```bash
+git commit -m "feat: complete module 1 - setup project with Tailwind and basic card"
+```
+
+> **Pro Tip**: Write clear commit messages. Good format: `type: description`
+>
+> - `feat:` for new features
+> - `fix:` for bug fixes
+> - `docs:` for documentation
+> - `style:` for formatting
+
+### Step 7.5: Switch to Main Branch
+
+```bash
+git checkout main
+```
+
+### Step 7.6: Merge Feature Branch
+
+Merge your feature branch into main:
+
+```bash
+git merge feat/module-1-workshop
+```
+
+This brings your changes from the feature branch into the main branch.
+
+### Step 7.7: Create GitHub Repository
+
+1. Go to [GitHub.com](https://github.com) and sign in
+2. Click the **+** icon (top right) → **New repository**
+3. Name your repository: `mits-dashboard`
+4. Keep it **Public** or **Private** (your choice)
+5. **Do NOT** initialize with README, .gitignore, or license
+6. Click **Create repository**
+
+### Step 7.8: Add Remote and Push
+
+GitHub will show you commands. Run these in your terminal:
+
+```bash
+# Add GitHub as remote
+git remote add origin https://github.com/YOUR-USERNAME/mits-dashboard.git
+
+# Rename branch to main (if needed)
+git branch -M main
+
+# Push to GitHub
+git push -u origin main
+```
+
+Replace `YOUR-USERNAME` with your actual GitHub username.
+
+> **Understanding**:
+>
+> - `origin` is the name for your GitHub remote
+> - `-u` (or `--set-upstream`) sets upstream tracking (links local main to remote main)
+> - The `-u` flag is only needed for the **first push**
+> - After this initial setup, you can use the simpler `git push` command
+
+> **Note**: Some developers prefer to just use `git push` without `-u` for the first time too, but you'll need to specify `origin main` each time. Using `-u` once saves typing later!
+
+### Step 7.9: Verify on GitHub
+
+1. Refresh your GitHub repository page
+2. You should see all your files
+3. Check that `node_modules` and `dist` are NOT there (thanks to `.gitignore`!)
+
+### Step 7.10: Understanding the Git Workflow
+
+Here's what you just learned:
+
+```
+1. Create feature branch → Work in isolation
+2. Commit changes → Save snapshots
+3. Switch to main → Go back to stable branch
+4. Merge → Bring changes into main
+5. Push to GitHub → Backup & share
+```
+
+This is the **feature branch workflow** used in professional teams!
+
+---
+
 ## 🎉 Congratulations!
 
 You've completed Module 1! You now have:
@@ -279,6 +436,7 @@ You've completed Module 1! You now have:
 2. ✅ Tailwind CSS installed and configured
 3. ✅ A beautifully styled card component
 4. ✅ Understanding of basic Tailwind utility classes
+5. ✅ Project under version control with Git & GitHub
 
 ## Challenge Exercises (Optional)
 

@@ -8,6 +8,7 @@ This is the complete solution for Module 1 of the MITS Dashboard Tutorial.
 - ✅ Tailwind CSS v4 configured with Vite plugin
 - ✅ Simple centered card with title and description
 - ✅ Clean project structure
+- ✅ Git repository with proper .gitignore
 
 ## How to Run
 
@@ -36,6 +37,7 @@ solution/
 │   ├── main.tsx         # React entry point
 │   ├── index.css        # Tailwind CSS import
 │   └── vite-env.d.ts    # Vite type definitions
+├── .gitignore           # Git ignore rules
 ├── index.html           # HTML entry point
 ├── package.json         # Dependencies
 ├── tsconfig.json        # TypeScript configuration
@@ -49,16 +51,13 @@ solution/
 Configures Vite with the Tailwind CSS v4 plugin:
 
 ```ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [
-    tailwindcss(),
-    react(),
-  ],
-})
+  plugins: [tailwindcss(), react()],
+});
 ```
 
 ### `src/index.css`
@@ -86,7 +85,7 @@ function App() {
         </p>
       </div>
     </div>
-  )
+  );
 }
 ```
 
@@ -99,7 +98,23 @@ This project uses **Tailwind CSS v4** which has a simpler setup:
 - No `tailwind.config.js` needed for basic usage
 - Faster compilation and better Vite integration
 
+## Git Setup
+
+The solution includes a `.gitignore` file configured to exclude:
+
+- `node_modules/` - Dependencies (too large)
+- `dist/` - Build output (generated)
+- `.env` files - Environment secrets
+- Editor and OS files
+
+To use version control:
+
+```bash
+git init
+git add .
+git commit -m "feat: complete module 1 - setup project with Tailwind"
+```
+
 ## Next Module
 
 Continue to **Module 2: Playing with Colors** to explore Tailwind's color palette and create light/dark card variations!
-
