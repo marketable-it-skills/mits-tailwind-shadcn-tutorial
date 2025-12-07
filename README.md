@@ -35,12 +35,12 @@ A responsive MITS Project Dashboard that displays project cards with:
 | [Module 4](./module-4/) | Introducing ShadCN UI      | Component libraries, ShadCN setup, Card components, semantic theming            |
 | [Module 5](./module-5/) | Badges & Tags              | ShadCN Badge component, variants, custom colors, component composition          |
 | [Module 6](./module-6/) | Card Interactions          | Hover effects, transitions, click handlers, keyboard accessibility, focus rings |
+| [Module 7](./module-7/) | Responsive Grid Layout     | CSS Grid, responsive breakpoints, mobile-first design, container patterns       |
 
 ### Upcoming Modules
 
 | Module    | Focus             | Status  |
 | --------- | ----------------- | ------- |
-| Module 7  | Grid Layout       | Planned |
 | Module 8  | Component Props   | Planned |
 | Module 9  | Real Data Loading | Planned |
 | Module 10 | Theme Toggle      | Planned |
