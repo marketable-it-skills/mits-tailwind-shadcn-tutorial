@@ -357,8 +357,15 @@ Here's what one complete card should look like:
 
 ```tsx
 <Card
-  className="w-80 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer"
+  className="w-80 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
+  tabIndex={0}
   onClick={() => console.log("Light card clicked!")}
+  onKeyDown={(e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      console.log("Light card clicked!");
+    }
+  }}
 >
   <CardHeader>
     <Badge variant="secondary">EuroSkills 2025 Training HU</Badge>

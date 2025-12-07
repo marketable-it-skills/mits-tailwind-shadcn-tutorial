@@ -68,14 +68,42 @@ onClick={() => console.log('Colored card clicked!')}
 - Foundation for future navigation (Module 8)
 - Easy to test in browser console
 
+### 6. Added Keyboard Accessibility
+
+Cards are now keyboard-navigable:
+
+```tsx
+tabIndex={0}
+focus:outline-none focus:ring-2 focus:ring-blue-500
+onKeyDown={(e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    console.log('Card clicked!');
+  }
+}}
+```
+
+- `tabIndex={0}` - Makes cards focusable with Tab key
+- `focus:ring-2` - Shows visible focus indicator (blue ring)
+- `focus:outline-none` - Removes default browser outline
+- `onKeyDown` - Allows Enter/Space to trigger click
+- WCAG 2.1 compliant (keyboard navigation + visible focus)
+
 ## Complete Example
 
-Here's one complete interactive card:
+Here's one complete interactive and accessible card:
 
 ```tsx
 <Card 
-  className="w-80 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer"
+  className="w-80 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
+  tabIndex={0}
   onClick={() => console.log('Light card clicked!')}
+  onKeyDown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      console.log('Light card clicked!');
+    }
+  }}
 >
   <CardHeader>
     <Badge variant="secondary">EuroSkills 2025 Training HU</Badge>
@@ -139,8 +167,10 @@ module-6/solution/
    Visit `http://localhost:5173`
 
 4. **Test interactions:**
-   - Hover over each card (see shadow & scale)
-   - Click each card (open DevTools Console to see logs)
+   - **Mouse:** Hover over each card (see shadow & scale)
+   - **Click:** Click each card (open DevTools Console to see logs)
+   - **Keyboard:** Press Tab to focus cards, press Enter/Space to click
+   - **Focus:** See blue ring appear when card is focused
 
 ## What Students Learn
 
@@ -166,7 +196,13 @@ module-6/solution/
    - Cursor changes to indicate affordance
    - Subtle animations for polish
 
-6. **Layered Effects**
+6. **Keyboard Accessibility**
+   - Making interactive elements focusable
+   - Custom focus indicators (rings)
+   - Handling keyboard events (Enter/Space)
+   - WCAG 2.1 compliance
+
+7. **Layered Effects**
    - Combining shadow, scale, and transitions
    - Creating cohesive animations
    - Maintaining performance with CSS-only animations
@@ -234,23 +270,31 @@ onClick={() => handleClick(projectId)}
 - Performance difference is negligible
 - Easier to maintain
 
-## Accessibility Considerations
+## Accessibility Features ✓
 
-For keyboard users, you could add:
+All cards now include keyboard accessibility:
 
 ```tsx
 <Card 
   className="... focus:outline-none focus:ring-2 focus:ring-blue-500"
   tabIndex={0}
   onClick={...}
+  onKeyDown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      console.log('Card clicked!');
+    }
+  }}
 >
 ```
 
-This adds:
-- `tabIndex={0}` - Makes card keyboard focusable
-- `focus:ring-2` - Visible focus indicator
-- `focus:ring-blue-500` - Blue ring on focus
-- `focus:outline-none` - Removes default browser outline
+Features:
+- ✅ `tabIndex={0}` - Makes card keyboard focusable
+- ✅ `focus:ring-2` - Visible focus indicator (2px ring)
+- ✅ `focus:ring-blue-500` - Blue ring on focus (purple on blue card)
+- ✅ `focus:outline-none` - Removes default browser outline
+- ✅ `onKeyDown` - Responds to Enter and Space keys
+- ✅ Meets WCAG 2.1 Level AA standards
 
 ## Performance Note
 

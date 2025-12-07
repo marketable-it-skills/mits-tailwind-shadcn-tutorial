@@ -12,8 +12,15 @@ function App() {
     <div className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-8 p-8 bg-gray-100">
       {/* Light Card */}
       <Card 
-        className="w-80 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer"
+        className="w-80 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
+        tabIndex={0}
         onClick={() => console.log('Light card clicked!')}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            console.log('Light card clicked!');
+          }
+        }}
       >
         <CardHeader>
           <Badge variant="secondary">EuroSkills 2025 Training HU</Badge>
@@ -62,8 +69,15 @@ function App() {
       </Card>
       {/* Dark Card */}
       <Card 
-        className="w-80 bg-slate-900 rounded-lg border border-slate-700 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer"
+        className="w-80 bg-slate-900 rounded-lg border border-slate-700 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
+        tabIndex={0}
         onClick={() => console.log('Dark card clicked!')}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            console.log('Dark card clicked!');
+          }
+        }}
       >
         <CardHeader className="">
           <Badge variant="secondary" className="">
@@ -116,8 +130,15 @@ function App() {
 
       {/* Colored Accent Card */}
       <Card 
-        className="w-80 bg-blue-50 rounded-lg border border-blue-200 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer"
+        className="w-80 bg-blue-50 rounded-lg border border-blue-200 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500"
+        tabIndex={0}
         onClick={() => console.log('Colored card clicked!')}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            console.log('Colored card clicked!');
+          }
+        }}
       >
         <CardHeader>
           <Badge variant="secondary" className="bg-blue-200 text-blue-900">
