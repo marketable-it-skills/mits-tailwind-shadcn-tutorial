@@ -8,9 +8,12 @@ A responsive MITS Project Dashboard that displays project cards with:
 
 - Multiple color themes (light, dark, colored accents)
 - Professional typography hierarchy
+- ShadCN UI components (Card, Badge)
+- Competition badges and technology tags
+- Interactive hover effects and animations
+- Keyboard accessibility (WCAG 2.1 compliant)
 - Responsive grid layout
 - Dark/light mode toggle (upcoming modules)
-- Interactive components with ShadCN UI (upcoming modules)
 
 ## 🛠️ Tech Stack
 
@@ -24,23 +27,23 @@ A responsive MITS Project Dashboard that displays project cards with:
 
 ### Completed Modules
 
-| Module                  | Focus                      | What You'll Learn                                                         |
-| ----------------------- | -------------------------- | ------------------------------------------------------------------------- |
-| [Module 1](./module-1/) | Project Setup & First Card | Vite setup, Tailwind v4 configuration, basic card component, Git workflow |
-| [Module 2](./module-2/) | Color Exploration          | Tailwind color system, light/dark/colored themes, responsive layout       |
-| [Module 3](./module-3/) | Typography & Spacing       | Font sizes, weights, line heights, text hierarchy, spacing utilities      |
+| Module                  | Focus                      | What You'll Learn                                                               |
+| ----------------------- | -------------------------- | ------------------------------------------------------------------------------- |
+| [Module 1](./module-1/) | Project Setup & First Card | Vite setup, Tailwind v4 configuration, basic card component, Git workflow       |
+| [Module 2](./module-2/) | Color Exploration          | Tailwind color system, light/dark/colored themes, responsive layout             |
+| [Module 3](./module-3/) | Typography & Spacing       | Font sizes, weights, line heights, text hierarchy, spacing utilities            |
+| [Module 4](./module-4/) | Introducing ShadCN UI      | Component libraries, ShadCN setup, Card components, semantic theming            |
+| [Module 5](./module-5/) | Badges & Tags              | ShadCN Badge component, variants, custom colors, component composition          |
+| [Module 6](./module-6/) | Card Interactions          | Hover effects, transitions, click handlers, keyboard accessibility, focus rings |
 
 ### Upcoming Modules
 
-| Module    | Focus                 | Status  |
-| --------- | --------------------- | ------- |
-| Module 4  | Introducing ShadCN UI | Planned |
-| Module 5  | Badges & Tags         | Planned |
-| Module 6  | Card Interactions     | Planned |
-| Module 7  | Grid Layout           | Planned |
-| Module 8  | Component Props       | Planned |
-| Module 9  | Real Data Loading     | Planned |
-| Module 10 | Theme Toggle          | Planned |
+| Module    | Focus             | Status  |
+| --------- | ----------------- | ------- |
+| Module 7  | Grid Layout       | Planned |
+| Module 8  | Component Props   | Planned |
+| Module 9  | Real Data Loading | Planned |
+| Module 10 | Theme Toggle      | Planned |
 
 ## 🎓 Learning Philosophy
 
@@ -77,7 +80,7 @@ This tutorial follows a **UI-first, visual-first approach**:
    - Follow [`module-1/workshop.md`](./module-1/workshop.md)
    - Check your solution against `module-1/solution/`
 
-3. **Continue progressively through modules**
+3. **Continue progressively through modules** (Modules 1-6 are now complete!)
 
 ## 📖 How to Use This Tutorial
 
@@ -105,9 +108,11 @@ module-X/
 - ✅ **Tailwind CSS v4** - Uses the latest version with Vite plugin
 - ✅ **Color exploration** - Dedicated module for understanding color systems
 - ✅ **Typography focus** - Learn professional text hierarchy
-- ✅ **ShadCN integration** - See how libraries abstract patterns
-- ✅ **Git workflow** - Learn professional version control
+- ✅ **ShadCN integration** - Practical transition from hand-built to component library
+- ✅ **Accessibility first** - Keyboard navigation, focus states, WCAG compliance
+- ✅ **Git workflow** - Learn professional version control practices
 - ✅ **Progressive learning** - Each module builds on the previous
+- ✅ **Hands-on experiments** - Try variations and see immediate results
 
 ## 🤝 Contributing
 
