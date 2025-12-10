@@ -27,34 +27,36 @@ export function ProjectCard({
       onClick?.();
     }
   };
-  const focusRingColor_ =
-    focusRingColor === "green-500"
-      ? "focus:ring-green-500"
-      : "focus:ring-blue-500";
 
   return (
     <Card
-      className={`hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 ${focusRingColor_}`}
+      className={`hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-${focusRingColor} dark:bg-slate-900 dark:border-slate-800`}
       tabIndex={0}
       onClick={onClick}
       onKeyDown={handleKeyDown}
     >
       <CardHeader>
-        <Badge variant="secondary">{competition}</Badge>
-        <CardTitle className="text-2xl font-bold leading-tight">
+        <Badge variant="secondary" className="dark:bg-slate-800 dark:text-slate-300">
+          {competition}
+        </Badge>
+        <CardTitle className="text-2xl font-bold leading-tight dark:text-white">
           {title}
         </CardTitle>
-        <CardDescription className="text-base font-semibold">
+        <CardDescription className="text-base font-semibold dark:text-slate-300">
           {subtitle}
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 mb-4">
+        <p className="text-sm text-muted-foreground dark:text-slate-400 leading-relaxed line-clamp-3 mb-4">
           {description}
         </p>
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <Badge key={tag.label} variant="outline" className={tag.colorClass}>
+            <Badge
+              key={tag.label}
+              variant="outline"
+              className={`${tag.colorClass} dark:bg-opacity-20 dark:border-slate-700`}
+            >
               {tag.label}
             </Badge>
           ))}

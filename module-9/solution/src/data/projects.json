@@ -1,0 +1,159 @@
+[
+  {
+    "id": "es2025-module-b",
+    "competition": "EuroSkills 2025 Training HU",
+    "title": "ES2025 TRAINING HU S17 - Module B",
+    "subtitle": "SkillsShare Academy - Dynamic Website",
+    "description": "Create a server-side rendered administrative interface for SkillShare Academy platform management with role-based access control and OWASP security compliance.",
+    "tags": [
+      {
+        "label": "backend",
+        "colorClass": "bg-blue-50 text-blue-700 border-blue-200"
+      },
+      {
+        "label": "server-side",
+        "colorClass": "bg-cyan-50 text-cyan-700 border-cyan-200"
+      },
+      {
+        "label": "MySQL",
+        "colorClass": "bg-sky-50 text-sky-700 border-sky-200"
+      },
+      {
+        "label": "authentication",
+        "colorClass": "bg-purple-50 text-purple-700 border-purple-200"
+      }
+    ],
+    "focusRingColor": "blue-500"
+  },
+  {
+    "id": "es2025-module-a",
+    "competition": "EuroSkills 2025 Training HU",
+    "title": "ES2025 TRAINING HU S17 - Module A",
+    "subtitle": "Restaurant Portal - Mobile App",
+    "description": "Develop a cross-platform mobile application for restaurant table reservations with real-time availability, push notifications, and offline-first architecture.",
+    "tags": [
+      {
+        "label": "frontend",
+        "colorClass": "bg-green-50 text-green-700 border-green-200"
+      },
+      {
+        "label": "mobile",
+        "colorClass": "bg-emerald-50 text-emerald-700 border-emerald-200"
+      },
+      {
+        "label": "React Native",
+        "colorClass": "bg-teal-50 text-teal-700 border-teal-200"
+      },
+      {
+        "label": "offline-first",
+        "colorClass": "bg-lime-50 text-lime-700 border-lime-200"
+      }
+    ],
+    "focusRingColor": "green-500"
+  },
+  {
+    "id": "ws2024-cloud-computing",
+    "competition": "WorldSkills Lyon 2024",
+    "title": "WS2024 Cloud Computing - Day 3",
+    "subtitle": "Microservices Deployment Pipeline",
+    "description": "Design and implement a CI/CD pipeline for microservices deployment on Kubernetes with automated testing, monitoring, and rollback capabilities.",
+    "tags": [
+      {
+        "label": "DevOps",
+        "colorClass": "bg-orange-50 text-orange-700 border-orange-200"
+      },
+      {
+        "label": "CI/CD",
+        "colorClass": "bg-amber-50 text-amber-700 border-amber-200"
+      },
+      {
+        "label": "Kubernetes",
+        "colorClass": "bg-yellow-50 text-yellow-700 border-yellow-200"
+      },
+      {
+        "label": "Docker",
+        "colorClass": "bg-red-50 text-red-700 border-red-200"
+      }
+    ],
+    "focusRingColor": "orange-500"
+  },
+  {
+    "id": "es2025-module-c",
+    "competition": "EuroSkills 2025 Training HU",
+    "title": "ES2025 TRAINING HU S17 - Module C",
+    "subtitle": "E-Commerce Platform - Full Stack",
+    "description": "Build a complete e-commerce platform with product catalog, shopping cart, payment integration, and admin dashboard using modern full-stack technologies.",
+    "tags": [
+      {
+        "label": "full-stack",
+        "colorClass": "bg-purple-50 text-purple-700 border-purple-200"
+      },
+      {
+        "label": "Next.js",
+        "colorClass": "bg-violet-50 text-violet-700 border-violet-200"
+      },
+      {
+        "label": "PostgreSQL",
+        "colorClass": "bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200"
+      },
+      {
+        "label": "Stripe",
+        "colorClass": "bg-pink-50 text-pink-700 border-pink-200"
+      }
+    ],
+    "focusRingColor": "purple-500"
+  },
+  {
+    "id": "ws2024-cybersecurity",
+    "competition": "WorldSkills Lyon 2024",
+    "title": "WS2024 Cybersecurity - Module 2",
+    "subtitle": "Web Application Security Audit",
+    "description": "Perform comprehensive security audit of web applications, identify vulnerabilities using OWASP Top 10, and implement security fixes and best practices.",
+    "tags": [
+      {
+        "label": "security",
+        "colorClass": "bg-red-50 text-red-700 border-red-200"
+      },
+      {
+        "label": "OWASP",
+        "colorClass": "bg-rose-50 text-rose-700 border-rose-200"
+      },
+      {
+        "label": "penetration-testing",
+        "colorClass": "bg-pink-50 text-pink-700 border-pink-200"
+      },
+      {
+        "label": "vulnerability",
+        "colorClass": "bg-orange-50 text-orange-700 border-orange-200"
+      }
+    ],
+    "focusRingColor": "red-500"
+  },
+  {
+    "id": "es2025-module-d",
+    "competition": "EuroSkills 2025 Training HU",
+    "title": "ES2025 TRAINING HU S17 - Module D",
+    "subtitle": "Analytics Dashboard - Data Visualization",
+    "description": "Design and implement an interactive analytics dashboard with real-time data visualization, custom charts, and filtering capabilities using modern data libraries.",
+    "tags": [
+      {
+        "label": "data-viz",
+        "colorClass": "bg-indigo-50 text-indigo-700 border-indigo-200"
+      },
+      {
+        "label": "React",
+        "colorClass": "bg-blue-50 text-blue-700 border-blue-200"
+      },
+      {
+        "label": "D3.js",
+        "colorClass": "bg-sky-50 text-sky-700 border-sky-200"
+      },
+      {
+        "label": "real-time",
+        "colorClass": "bg-cyan-50 text-cyan-700 border-cyan-200"
+      }
+    ],
+    "focusRingColor": "indigo-500"
+  }
+]
+

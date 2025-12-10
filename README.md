@@ -13,7 +13,7 @@ A responsive MITS Project Dashboard that displays project cards with:
 - Interactive hover effects and animations
 - Keyboard accessibility (WCAG 2.1 compliant)
 - Responsive grid layout
-- Dark/light mode toggle (upcoming modules)
+- Dark/light mode toggle with theme persistence
 
 ## 🛠️ Tech Stack
 
@@ -37,13 +37,13 @@ A responsive MITS Project Dashboard that displays project cards with:
 | [Module 6](./module-6/) | Card Interactions          | Hover effects, transitions, click handlers, keyboard accessibility, focus rings |
 | [Module 7](./module-7/) | Responsive Grid Layout     | CSS Grid, responsive breakpoints, mobile-first design, container patterns       |
 | [Module 8](./module-8/) | Component Props            | Reusable components, TypeScript interfaces, props, array mapping, refactoring   |
+| [Module 9](./module-9/) | Theme Toggle - Dark Mode   | React Context, dark mode, localStorage, system preferences, theme persistence   |
 
 ### Upcoming Modules
 
-| Module    | Focus             | Status  |
-| --------- | ----------------- | ------- |
-| Module 9  | Real Data Loading | Planned |
-| Module 10 | Theme Toggle      | Planned |
+| Module     | Focus                   | Status  |
+| ---------- | ----------------------- | ------- |
+| Module 10  | Real Data Transformation | Planned |
 
 ## 🎓 Learning Philosophy
 
@@ -80,7 +80,7 @@ This tutorial follows a **UI-first, visual-first approach**:
    - Follow [`module-1/workshop.md`](./module-1/workshop.md)
    - Check your solution against `module-1/solution/`
 
-3. **Continue progressively through modules** (Modules 1-6 are now complete!)
+3. **Continue progressively through modules** (Modules 1-9 are now complete!)
 
 ## 📖 How to Use This Tutorial
 
