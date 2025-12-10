@@ -79,31 +79,6 @@ Each card displays a MITS project task with the following components:
 - **Container**: Centered with max-width constraint (e.g., max-w-7xl)
 - **Padding**: Appropriate padding around the grid (e.g., p-6 or p-8)
 
-### Additional Features (Optional)
-
-1. **Search Bar**
-
-   - Filter cards by title, description, or tags
-   - Debounced input for performance
-   - Clear button to reset search
-
-2. **Filter Controls**
-
-   - Filter by competition
-   - Filter by technology
-   - Filter by tags
-   - Multi-select capability
-
-3. **Sort Options**
-
-   - By competition name (A-Z)
-   - By estimated time
-   - By status (if applicable)
-
-4. **Empty States**
-   - Display message when no cards match filters
-   - Provide action to clear filters
-
 ## Theme System
 
 ### Theme Toggle
