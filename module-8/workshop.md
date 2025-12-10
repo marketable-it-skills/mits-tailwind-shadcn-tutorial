@@ -324,6 +324,16 @@ interface ProjectCardProps extends Project {
 Add the component function:
 
 ```tsx
+// Mapping object for focus ring colors (add at top of file, after imports)
+const focusRingClasses: Record<string, string> = {
+  "blue-500": "focus:ring-blue-500",
+  "green-500": "focus:ring-green-500",
+  "purple-500": "focus:ring-purple-500",
+  "orange-500": "focus:ring-orange-500",
+  "indigo-500": "focus:ring-indigo-500",
+  "red-500": "focus:ring-red-500",
+};
+
 export function ProjectCard({
   competition,
   title,
@@ -340,9 +350,13 @@ export function ProjectCard({
     }
   };
 
+  // Get the complete focus ring class from the mapping
+  const focusRingClass =
+    focusRingClasses[focusRingColor] || focusRingClasses["blue-500"];
+
   return (
     <Card
-      className={`hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-${focusRingColor}`}
+      className={`hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 ${focusRingClass}`}
       tabIndex={0}
       onClick={onClick}
       onKeyDown={handleKeyDown}
@@ -402,12 +416,21 @@ const handleKeyDown = (e: React.KeyboardEvent) => {
 
 **Dynamic Focus Ring:**
 
+We use a mapping object for focus ring colors (see code below). This is necessary because Tailwind's JIT compiler needs to see complete class names at build time. Template literals like `focus:ring-${color}` don't work!
+
 ```tsx
-focus:ring-${focusRingColor}
+const focusRingClasses: Record<string, string> = {
+  "blue-500": "focus:ring-blue-500",
+  "green-500": "focus:ring-green-500",
+  // ...
+};
+const focusRingClass =
+  focusRingClasses[focusRingColor] || "focus:ring-blue-500";
 ```
 
-- Uses the `focusRingColor` prop
+- Uses the `focusRingColor` prop to look up the complete class name
 - Each card can have a different color
+- Falls back to blue-500 if the color isn't in the mapping
 
 **Mapping Tags:**
 
@@ -444,6 +467,22 @@ interface ProjectCardProps extends Project {
   onClick?: () => void;
 }
 
+// Mapping object for focus ring colors
+// This is necessary because Tailwind's JIT compiler needs to see complete class names
+// Template literals like `focus:ring-${color}` won't work as Tailwind can't detect them at build time
+const focusRingClasses: Record<string, string> = {
+  "blue-500": "focus:ring-blue-500",
+  "green-500": "focus:ring-green-500",
+  "purple-500": "focus:ring-purple-500",
+  "orange-500": "focus:ring-orange-500",
+  "indigo-500": "focus:ring-indigo-500",
+  "red-500": "focus:ring-red-500",
+  "cyan-500": "focus:ring-cyan-500",
+  "pink-500": "focus:ring-pink-500",
+  "yellow-500": "focus:ring-yellow-500",
+  "teal-500": "focus:ring-teal-500",
+};
+
 export function ProjectCard({
   competition,
   title,
@@ -460,9 +499,13 @@ export function ProjectCard({
     }
   };
 
+  // Get the complete focus ring class from the mapping, fallback to blue-500
+  const focusRingClass =
+    focusRingClasses[focusRingColor] || focusRingClasses["blue-500"];
+
   return (
     <Card
-      className={`hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-${focusRingColor}`}
+      className={`hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 ${focusRingClass}`}
       tabIndex={0}
       onClick={onClick}
       onKeyDown={handleKeyDown}
@@ -1018,9 +1061,34 @@ const isCompact = variant === "compact";
 
 ### Focus Ring Not Working?
 
-- ✅ Check that `focusRingColor` is a valid Tailwind color
-- ✅ Verify the color is not being purged by Tailwind
-- ✅ Consider using `safelist` in `tailwind.config.js` for dynamic colors
+**Important:** The focus ring uses a mapping object approach due to Tailwind's JIT compiler limitations.
+
+**The Problem:**
+Tailwind's JIT (Just-In-Time) compiler scans your source code for **complete class names** at build time. Template literals like this won't work:
+
+```tsx
+className={`focus:ring-${focusRingColor}`}  // ❌ Won't work!
+```
+
+Even though `focusRingColor` is "blue-500", Tailwind can't detect `focus:ring-blue-500` because it only sees the template literal pattern, not the interpolated result.
+
+**The Solution:**
+We use a mapping object with all complete class names:
+
+```tsx
+const focusRingClasses: Record<string, string> = {
+  "blue-500": "focus:ring-blue-500",
+  "green-500": "focus:ring-green-500",
+  // ... etc
+};
+
+const focusRingClass =
+  focusRingClasses[focusRingColor] || focusRingClasses["blue-500"];
+```
+
+This way, Tailwind sees all the complete class names and includes them in the build.
+
+**Key Takeaway:** Never use string interpolation/concatenation with Tailwind classes! Always use complete class names that Tailwind can detect at build time.
 
 ### Console Logs Not Working?
 
