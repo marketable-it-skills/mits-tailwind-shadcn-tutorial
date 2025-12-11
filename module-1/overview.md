@@ -108,7 +108,7 @@ Before starting this module, ensure you have:
 
 By the end of this module, you'll have:
 
-![Expected Result](./assets/module-1-result.png)
+![Expected Result](assets/project-description-images/module-1-solution.png)
 
 A single card centered on the screen with:
 
