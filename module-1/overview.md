@@ -108,8 +108,6 @@ Before starting this module, ensure you have:
 
 By the end of this module, you'll have:
 
-![Expected Result](assets/project-description-images/module-1-solution.png)
-
 A single card centered on the screen with:
 
 - White background
@@ -118,4 +116,5 @@ A single card centered on the screen with:
 - Bold title and muted description text
 - Gray page background
 
+![Expected Result](assets/project-description-images/module-1-solution.png)
 Let's get started! 🚀
