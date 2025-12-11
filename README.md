@@ -17,6 +17,8 @@ A responsive MITS Project Dashboard that displays project cards with:
 - Responsive grid layout
 - Dark/light mode toggle with theme persistence
 
+![MITS Tailwind CSS & ShadCN UI Tutorial](/assets/images/course-solution.webp)
+
 ## 🛠️ Tech Stack
 
 - **Vite** - Fast build tool and development server
