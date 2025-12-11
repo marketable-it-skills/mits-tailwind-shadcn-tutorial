@@ -2,6 +2,8 @@
 
 A hands-on, step-by-step tutorial for learning **Tailwind CSS** and **ShadCN UI** by building a modern project dashboard. This tutorial is part of the **MITS (Marketable IT Skills)** Pilot program.
 
+![MITS Tailwind CSS & ShadCN UI Tutorial](/assets/images/course-cover-image.webp)
+
 ## 🎯 What You'll Build
 
 A responsive MITS Project Dashboard that displays project cards with:
@@ -27,23 +29,22 @@ A responsive MITS Project Dashboard that displays project cards with:
 
 ### Completed Modules
 
-| Module                  | Focus                      | What You'll Learn                                                               |
-| ----------------------- | -------------------------- | ------------------------------------------------------------------------------- |
-| [Module 1](./module-1/) | Project Setup & First Card | Vite setup, Tailwind v4 configuration, basic card component, Git workflow       |
-| [Module 2](./module-2/) | Color Exploration          | Tailwind color system, light/dark/colored themes, responsive layout             |
-| [Module 3](./module-3/) | Typography & Spacing       | Font sizes, weights, line heights, text hierarchy, spacing utilities            |
-| [Module 4](./module-4/) | Introducing ShadCN UI      | Component libraries, ShadCN setup, Card components, semantic theming            |
-| [Module 5](./module-5/) | Badges & Tags              | ShadCN Badge component, variants, custom colors, component composition          |
-| [Module 6](./module-6/) | Card Interactions          | Hover effects, transitions, click handlers, keyboard accessibility, focus rings |
-| [Module 7](./module-7/) | Responsive Grid Layout     | CSS Grid, responsive breakpoints, mobile-first design, container patterns       |
-| [Module 8](./module-8/) | Component Props            | Reusable components, TypeScript interfaces, props, array mapping, refactoring   |
-| [Module 9](./module-9/) | Theme Toggle - Dark Mode   | React Context, dark mode, localStorage, system preferences, theme persistence   |
+| Module                    | Focus                      | What You'll Learn                                                               |
+| ------------------------- | -------------------------- | ------------------------------------------------------------------------------- |
+| [Module 1](./module-1/)   | Project Setup & First Card | Vite setup, Tailwind v4 configuration, basic card component, Git workflow       |
+| [Module 2](./module-2/)   | Color Exploration          | Tailwind color system, light/dark/colored themes, responsive layout             |
+| [Module 3](./module-3/)   | Typography & Spacing       | Font sizes, weights, line heights, text hierarchy, spacing utilities            |
+| [Module 4](./module-4/)   | Introducing ShadCN UI      | Component libraries, ShadCN setup, Card components, semantic theming            |
+| [Module 5](./module-5/)   | Badges & Tags              | ShadCN Badge component, variants, custom colors, component composition          |
+| [Module 6](./module-6/)   | Card Interactions          | Hover effects, transitions, click handlers, keyboard accessibility, focus rings |
+| [Module 7](./module-7/)   | Responsive Grid Layout     | CSS Grid, responsive breakpoints, mobile-first design, container patterns       |
+| [Module 8](./module-8/)   | Component Props            | Reusable components, TypeScript interfaces, props, array mapping, refactoring   |
+| [Module 9](./module-9/)   | Theme Toggle - Dark Mode   | React Context, dark mode, localStorage, system preferences, theme persistence   |
+| [Module 10](./module-10/) | Real Data Transformation   | Data transformation, flag emojis, dynamic colors, complex JSON, production data |
 
-### Upcoming Modules
+### All Modules Complete! 🎉
 
-| Module     | Focus                   | Status  |
-| ---------- | ----------------------- | ------- |
-| Module 10  | Real Data Transformation | Planned |
+The full 10-module tutorial is now complete, covering everything from project setup to production-ready data transformation!
 
 ## 🎓 Learning Philosophy
 
@@ -80,7 +81,7 @@ This tutorial follows a **UI-first, visual-first approach**:
    - Follow [`module-1/workshop.md`](./module-1/workshop.md)
    - Check your solution against `module-1/solution/`
 
-3. **Continue progressively through modules** (Modules 1-9 are now complete!)
+3. **Continue progressively through modules** (All 10 modules complete!)
 
 ## 📖 How to Use This Tutorial
 

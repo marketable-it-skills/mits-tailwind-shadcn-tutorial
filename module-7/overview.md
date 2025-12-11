@@ -4,6 +4,8 @@
 
 In this module, you'll transform your single interactive card into a **professional multi-card dashboard** using CSS Grid and Tailwind's responsive utilities. You'll learn how to create layouts that automatically adapt to different screen sizes while maintaining visual harmony.
 
+![Module Solution](/module-1/assets/project-description-images/module-1-solution.png)
+
 ## Learning Objectives
 
 By the end of this module, you will be able to:
