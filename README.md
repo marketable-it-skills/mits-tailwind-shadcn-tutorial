@@ -1,5 +1,7 @@
 # MITS Tailwind CSS & ShadCN UI Tutorial
 
+**Powered by [Marketable IT Skills (MITS)](https://github.com/marketable-it-skills) initiative**
+
 A hands-on, step-by-step tutorial for learning **Tailwind CSS** and **ShadCN UI** by building a modern project dashboard. This tutorial is part of the **MITS (Marketable IT Skills)** Pilot program.
 
 ![MITS Tailwind CSS & ShadCN UI Tutorial](/assets/images/course-cover-image.webp)
