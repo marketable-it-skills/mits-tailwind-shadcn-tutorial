@@ -1,1 +1,0 @@
-I would like to add git requirements for module-1. We should ask the students to create a local git repository, checkout a feat/module-1-workshop branch, commit at least the last stage of their module-1 work, checkout main, and merge feat/module-1-workshop. Then create a repository in Github, set upsteram and push. It is OK, if If you refine this process.
