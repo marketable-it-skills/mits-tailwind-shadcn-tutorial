@@ -45,21 +45,30 @@ Let's enable Tailwind's dark mode feature using the class strategy.
 
 We need to configure Tailwind to use the `class` strategy for dark mode.
 
-**Open** `tailwind.config.js`:
+**Open** `tailwind.config.ts`:
 
 Find the configuration object and add the `darkMode` option:
 
-```javascript
-/** @type {import('tailwindcss').Config} */
+```typescript
+import type { Config } from "tailwindcss";
+
 export default {
-  darkMode: 'class', // Add this line
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: "class", // Add this line
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
   },
   plugins: [],
-};
+} satisfies Config;
 ```
+
+#### 🔍 Understanding the TypeScript Format
+
+This configuration uses modern TypeScript features:
+
+- **`import type { Config }`** - Type-only import that gets removed during compilation
+- **`satisfies Config`** - TypeScript 4.9+ keyword that validates the object matches the `Config` type while preserving specific literal types (like `"class"`) for better autocomplete and type safety
+- This gives you IDE validation without sacrificing type precision
 
 #### 💡 What This Does
 
@@ -73,15 +82,21 @@ Let's verify dark mode is working before building the toggle.
 **Open your browser DevTools** (F12), go to the **Console**, and run:
 
 ```javascript
-document.documentElement.classList.add('dark');
+document.documentElement.classList.add("dark");
 ```
 
-**Nothing should change yet** because we haven't added any `dark:` variants to our components.
+This adds `class="dark"` to the `<html>` element, activating Tailwind's dark mode.
+
+**What you should see:**
+
+- In DevTools **Elements** tab: `<html class="dark">`
+- Visually: The cards should switch to a basic dark theme! This happens because ShadCN components use CSS variables (like `bg-card`, `text-muted-foreground`) that already have dark mode values defined in your `index.css`
+- However, the background and some elements still need custom `dark:` variants, which we'll add in the next tasks
 
 To remove the dark class:
 
 ```javascript
-document.documentElement.classList.remove('dark');
+document.documentElement.classList.remove("dark");
 ```
 
 ---
@@ -103,9 +118,9 @@ mkdir src/contexts
 **Create** `src/contexts/ThemeProvider.tsx`:
 
 ```typescript
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from "react";
 
-type Theme = 'light' | 'dark';
+type Theme = "light" | "dark";
 
 interface ThemeContextType {
   theme: Theme;
@@ -116,12 +131,12 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   // Initialize theme state
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>("light");
 
   // Initialize theme on mount
   useEffect(() => {
     // Check localStorage first
-    const savedTheme = localStorage.getItem('theme') as Theme | null;
+    const savedTheme = localStorage.getItem("theme") as Theme | null;
 
     if (savedTheme) {
       // User has a saved preference
@@ -129,9 +144,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     } else {
       // Check system preference
       const prefersDark = window.matchMedia(
-        '(prefers-color-scheme: dark)'
+        "(prefers-color-scheme: dark)"
       ).matches;
-      setTheme(prefersDark ? 'dark' : 'light');
+      setTheme(prefersDark ? "dark" : "light");
     }
   }, []);
 
@@ -139,17 +154,17 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const root = document.documentElement;
 
-    if (theme === 'dark') {
-      root.classList.add('dark');
+    if (theme === "dark") {
+      root.classList.add("dark");
     } else {
-      root.classList.remove('dark');
+      root.classList.remove("dark");
     }
 
-    localStorage.setItem('theme', theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   return (
@@ -163,7 +178,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 export function useTheme() {
   const context = useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 }
@@ -172,37 +187,43 @@ export function useTheme() {
 #### 🔍 Code Breakdown
 
 **Type Definitions**:
+
 ```typescript
-type Theme = 'light' | 'dark';  // Only these two values allowed
+type Theme = "light" | "dark"; // Only these two values allowed
 interface ThemeContextType {
-  theme: Theme;                  // Current theme
-  toggleTheme: () => void;       // Function to switch themes
+  theme: Theme; // Current theme
+  toggleTheme: () => void; // Function to switch themes
 }
 ```
 
 **Context Creation**:
+
 ```typescript
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 ```
 
 **State Management**:
+
 ```typescript
-const [theme, setTheme] = useState<Theme>('light');
+const [theme, setTheme] = useState<Theme>("light");
 ```
 
 **Initialization Effect** (runs once on mount):
+
 1. Check localStorage for saved preference
 2. If not found, check system preference
 3. Set the theme accordingly
 
 **Synchronization Effect** (runs when theme changes):
+
 1. Add/remove `dark` class from `<html>`
 2. Save preference to localStorage
 
 **Toggle Function**:
+
 ```typescript
 const toggleTheme = () => {
-  setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
 };
 ```
 
@@ -215,17 +236,17 @@ Now we need to wrap our entire app with the ThemeProvider.
 **Update the imports**:
 
 ```typescript
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import App from './App.tsx';
-import { ThemeProvider } from './contexts/ThemeProvider'; // Add this
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
+import { ThemeProvider } from "./contexts/ThemeProvider"; // Add this
 ```
 
 **Wrap App with ThemeProvider**:
 
 ```typescript
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
       <App />
@@ -247,7 +268,7 @@ Let's verify the context is working before adding the UI.
 **Temporarily add** this to `src/App.tsx` (we'll remove it later):
 
 ```typescript
-import { useTheme } from './contexts/ThemeProvider'; // Add this import
+import { useTheme } from "./contexts/ThemeProvider"; // Add this import
 
 function App() {
   const { theme, toggleTheme } = useTheme(); // Add this line
@@ -262,15 +283,14 @@ function App() {
         Current Theme: {theme} (Click to toggle)
       </button>
 
-      <div className="max-w-7xl mx-auto">
-        {/* ...rest of your code */}
-      </div>
+      <div className="max-w-7xl mx-auto">{/* ...rest of your code */}</div>
     </div>
   );
 }
 ```
 
 **Run your app** and click the button. You should see:
+
 - Theme text changes
 - localStorage gets updated (check DevTools → Application → Local Storage)
 
@@ -293,6 +313,7 @@ Find the main container div and add dark mode variants:
 ```
 
 #### Changes:
+
 - Added `dark:bg-slate-950` - Very dark background for dark mode
 - Added `transition-colors duration-200` - Smooth color transition
 
@@ -303,6 +324,7 @@ Find the main container div and add dark mode variants:
 **Open** `src/components/ProjectCard.tsx`:
 
 We need to add dark mode variants for:
+
 - Card background
 - Card border
 - Title text
@@ -314,8 +336,8 @@ We need to add dark mode variants for:
 ```typescript
 <Card
   className={`
-    hover:shadow-2xl hover:scale-[1.02] 
-    transition-all duration-200 cursor-pointer 
+    hover:shadow-2xl hover:scale-[1.02]
+    transition-all duration-200 cursor-pointer
     focus:outline-none focus:ring-2 focus:ring-${focusRingColor}
     dark:bg-slate-900 dark:border-slate-800
   `}
@@ -361,8 +383,8 @@ The ShadCN Card component also needs dark mode variants.
 <div
   ref={ref}
   className={cn(
-    'rounded-lg border bg-card text-card-foreground shadow-sm',
-    'dark:bg-slate-900 dark:border-slate-800',  // Add this line
+    "rounded-lg border bg-card text-card-foreground shadow-sm",
+    "dark:bg-slate-900 dark:border-slate-800", // Add this line
     className
   )}
   {...props}
@@ -374,7 +396,7 @@ The ShadCN Card component also needs dark mode variants.
 ```typescript
 <div
   ref={ref}
-  className={cn('flex flex-col space-y-1.5 p-6 dark:text-white', className)}
+  className={cn("flex flex-col space-y-1.5 p-6 dark:text-white", className)}
   {...props}
 />
 ```
@@ -382,10 +404,10 @@ The ShadCN Card component also needs dark mode variants.
 **Find CardContent**:
 
 ```typescript
-<div 
-  ref={ref} 
-  className={cn('p-6 pt-0 dark:text-slate-300', className)} 
-  {...props} 
+<div
+  ref={ref}
+  className={cn("p-6 pt-0 dark:text-slate-300", className)}
+  {...props}
 />
 ```
 
@@ -405,7 +427,7 @@ secondary:
 **Update the `outline` variant**:
 
 ```typescript
-outline: 
+outline:
   'text-foreground dark:border-slate-700',
 ```
 
@@ -468,8 +490,8 @@ Create a new file:
 **Create** `src/components/ThemeToggle.tsx`:
 
 ```typescript
-import { Moon, Sun } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeProvider';
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "../contexts/ThemeProvider";
 
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
@@ -486,7 +508,7 @@ export function ThemeToggle() {
       "
       aria-label="Toggle theme"
     >
-      {theme === 'light' ? (
+      {theme === "light" ? (
         <Moon className="w-5 h-5 text-gray-800 dark:text-slate-200" />
       ) : (
         <Sun className="w-5 h-5 text-slate-200" />
@@ -499,16 +521,19 @@ export function ThemeToggle() {
 #### 🔍 Component Breakdown
 
 **Icons**:
+
 - `<Moon />` - Shows in light mode (suggests switching to dark)
 - `<Sun />` - Shows in dark mode (suggests switching to light)
 
 **Styling**:
+
 - Background adapts to theme
 - Hover states for both themes
 - Focus ring for accessibility
 - Smooth transitions
 
 **Accessibility**:
+
 - `aria-label` for screen readers
 - Focus ring for keyboard navigation
 
@@ -521,7 +546,7 @@ Now let's add a header to our dashboard with the theme toggle button.
 **Import ThemeToggle**:
 
 ```typescript
-import { ThemeToggle } from './components/ThemeToggle';
+import { ThemeToggle } from "./components/ThemeToggle";
 ```
 
 **Update the App component** to include a header:
@@ -583,6 +608,7 @@ Find the competition Badge and ensure it has dark mode variants:
 Let's create a checklist to verify dark mode is working everywhere:
 
 **Light Mode Colors**:
+
 - ✅ Background: `bg-gray-100`
 - ✅ Card: `bg-white` with `border-gray-200`
 - ✅ Title: `text-gray-900`
@@ -590,6 +616,7 @@ Let's create a checklist to verify dark mode is working everywhere:
 - ✅ Description: `text-muted-foreground`
 
 **Dark Mode Colors**:
+
 - ✅ Background: `dark:bg-slate-950`
 - ✅ Card: `dark:bg-slate-900` with `dark:border-slate-800`
 - ✅ Title: `dark:text-white`
@@ -603,6 +630,7 @@ Let's create a checklist to verify dark mode is working everywhere:
 Ensure all color-changing elements have transitions for smooth theme switching.
 
 **Elements that should have transitions**:
+
 - Main background: `transition-colors duration-200`
 - Cards: Already have `transition-all` (includes colors)
 - Badges: Can add `transition-colors` if needed
@@ -617,6 +645,7 @@ Let's thoroughly test the theme system!
 ### Test Checklist
 
 **Functionality Tests**:
+
 - [ ] Click theme toggle - theme switches immediately
 - [ ] Refresh page - theme preference persists
 - [ ] Clear localStorage - falls back to system preference
@@ -626,6 +655,7 @@ Let's thoroughly test the theme system!
 - [ ] Tag colors look good in both themes
 
 **Visual Tests**:
+
 - [ ] Smooth transition when switching themes
 - [ ] No flashing or jarring color changes
 - [ ] Good contrast in both themes
@@ -633,12 +663,14 @@ Let's thoroughly test the theme system!
 - [ ] Focus rings visible in both themes
 
 **Responsive Tests**:
+
 - [ ] Dark mode works on mobile viewport
 - [ ] Dark mode works on tablet viewport
 - [ ] Dark mode works on desktop viewport
 - [ ] Theme toggle button accessible on all sizes
 
 **Browser Tests**:
+
 - [ ] Open DevTools → Application → Local Storage
 - [ ] Verify "theme" key is saved
 - [ ] Value should be "light" or "dark"
@@ -691,13 +723,13 @@ Add a keyboard shortcut (e.g., `Ctrl+Shift+T`) to toggle theme.
 ```typescript
 useEffect(() => {
   const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.ctrlKey && e.shiftKey && e.key === 'T') {
+    if (e.ctrlKey && e.shiftKey && e.key === "T") {
       toggleTheme();
     }
   };
 
-  window.addEventListener('keydown', handleKeyDown);
-  return () => window.removeEventListener('keydown', handleKeyDown);
+  window.addEventListener("keydown", handleKeyDown);
+  return () => window.removeEventListener("keydown", handleKeyDown);
 }, [toggleTheme]);
 ```
 
@@ -709,16 +741,16 @@ Make the app respond to system theme changes in real-time.
 
 ```typescript
 useEffect(() => {
-  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
   const handleChange = (e: MediaQueryListEvent) => {
-    if (!localStorage.getItem('theme')) {
-      setTheme(e.matches ? 'dark' : 'light');
+    if (!localStorage.getItem("theme")) {
+      setTheme(e.matches ? "dark" : "light");
     }
   };
 
-  mediaQuery.addEventListener('change', handleChange);
-  return () => mediaQuery.removeEventListener('change', handleChange);
+  mediaQuery.addEventListener("change", handleChange);
+  return () => mediaQuery.removeEventListener("change", handleChange);
 }, []);
 ```
 
@@ -747,11 +779,11 @@ Add a third theme option: "system" (auto).
 ```html
 <script>
   // Add this in <head> before other scripts
-  const theme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  if (theme === 'dark' || (!theme && prefersDark)) {
-    document.documentElement.classList.add('dark');
+  const theme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (theme === "dark" || (!theme && prefersDark)) {
+    document.documentElement.classList.add("dark");
   }
 </script>
 ```
@@ -788,7 +820,7 @@ Congratulations! 🎉 You've successfully implemented a complete dark mode theme
 ✅ System preference detection  
 ✅ Dark mode variants for all components  
 ✅ Smooth transitions  
-✅ Accessible theme switching  
+✅ Accessible theme switching
 
 ### What You Learned
 
@@ -807,6 +839,3 @@ In **Module 10**, you'll load real MITS project data from `collection.json` and 
 ---
 
 **Great work on Module 9!** 🌙✨
-
-
-
