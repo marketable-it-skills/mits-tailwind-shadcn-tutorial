@@ -72,6 +72,102 @@ We'll use the **`class`** strategy because it gives users control and allows per
 
 When the `dark` class is present on a parent element (usually `<html>`), all `dark:` variants activate.
 
+### ShadCN's Token-Based Color System
+
+ShadCN uses a **token-based color system** powered by **CSS variables** that automatically adapt to dark mode. This means many components don't need explicit `dark:` variants!
+
+**The Three-Layer System:**
+
+**1. CSS Variables** - Define colors for each theme:
+
+```css
+/* index.css */
+:root {
+  --card: oklch(1 0 0); /* White in light mode */
+  --card-foreground: oklch(0.129 0.042 264.695); /* Dark text */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  /* ... more color tokens */
+}
+
+.dark {
+  --card: oklch(0.208 0.042 265.755); /* Dark slate in dark mode */
+  --card-foreground: oklch(0.984 0.003 247.858); /* Light text */
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  /* ... same tokens, different values */
+}
+```
+
+**2. @theme inline** - Registers CSS variables as Tailwind colors:
+
+```css
+@theme inline {
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  /* ... maps all design tokens */
+}
+```
+
+This tells Tailwind: "Create utility classes for these CSS variables."
+
+**3. Tailwind Classes** - Automatically generated utilities you can use:
+
+```tsx
+// These classes are automatically created from @theme inline:
+bg-card             → background-color: var(--color-card)
+text-card-foreground → color: var(--color-card-foreground)
+bg-background       → background-color: var(--color-background)
+text-foreground     → color: var(--color-foreground)
+bg-muted            → background-color: var(--color-muted)
+text-muted-foreground → color: var(--color-muted-foreground)
+bg-primary          → background-color: var(--color-primary)
+text-secondary-foreground → color: var(--color-secondary-foreground)
+// ... and many more!
+```
+
+**In your components:**
+
+```tsx
+// This automatically switches colors based on theme!
+<Card className="bg-card text-card-foreground">
+  <p className="text-muted-foreground">
+    {/* No dark: variants needed - CSS variables handle it */}
+  </p>
+</Card>
+```
+
+**How it adapts automatically:**
+
+1. Light mode: `bg-card` → `var(--color-card)` → `:root { --card: white }`
+2. Dark mode: `bg-card` → `var(--color-card)` → `.dark { --card: slate }`
+3. Same class, different values! ✨
+
+**When to use `dark:` variants:**
+
+- ✅ **Custom colors** not part of ShadCN's token system (e.g., `bg-gray-100 dark:bg-slate-950`)
+- ✅ **Custom components** that don't use ShadCN tokens
+- ❌ **ShadCN components** that use `bg-card`, `text-muted-foreground`, etc. (already token-based)
+
+**Benefits of this approach:**
+
+- 🎨 **Single source of truth** - Change one CSS variable, update entire theme
+- 🔧 **Easy customization** - Modify colors in one place
+- 📦 **Smaller CSS** - No duplicate `dark:` variants needed
+- 🚀 **Better maintainability** - Theme changes are centralized
+
+This approach keeps your theme system maintainable - change the CSS variables once, and all components update automatically!
+
 ## React Context API
 
 ### What is Context?

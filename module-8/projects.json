@@ -8,22 +8,22 @@
     "tags": [
       {
         "label": "backend",
-        "colorClass": "bg-blue-50 text-blue-700 border-blue-200"
+        "color": "blue"
       },
       {
         "label": "server-side",
-        "colorClass": "bg-cyan-50 text-cyan-700 border-cyan-200"
+        "color": "cyan"
       },
       {
         "label": "MySQL",
-        "colorClass": "bg-sky-50 text-sky-700 border-sky-200"
+        "color": "sky"
       },
       {
         "label": "authentication",
-        "colorClass": "bg-purple-50 text-purple-700 border-purple-200"
+        "color": "purple"
       }
     ],
-    "focusRingColor": "blue-500"
+    "focusRingColor": "blue"
   },
   {
     "id": "es2025-module-a",
@@ -34,22 +34,22 @@
     "tags": [
       {
         "label": "frontend",
-        "colorClass": "bg-green-50 text-green-700 border-green-200"
+        "color": "green"
       },
       {
         "label": "mobile",
-        "colorClass": "bg-emerald-50 text-emerald-700 border-emerald-200"
+        "color": "emerald"
       },
       {
         "label": "React Native",
-        "colorClass": "bg-teal-50 text-teal-700 border-teal-200"
+        "color": "teal"
       },
       {
         "label": "offline-first",
-        "colorClass": "bg-lime-50 text-lime-700 border-lime-200"
+        "color": "lime"
       }
     ],
-    "focusRingColor": "green-500"
+    "focusRingColor": "green"
   },
   {
     "id": "ws2024-cloud-computing",
@@ -60,22 +60,22 @@
     "tags": [
       {
         "label": "DevOps",
-        "colorClass": "bg-orange-50 text-orange-700 border-orange-200"
+        "color": "orange"
       },
       {
         "label": "CI/CD",
-        "colorClass": "bg-amber-50 text-amber-700 border-amber-200"
+        "color": "amber"
       },
       {
         "label": "Kubernetes",
-        "colorClass": "bg-yellow-50 text-yellow-700 border-yellow-200"
+        "color": "yellow"
       },
       {
         "label": "Docker",
-        "colorClass": "bg-red-50 text-red-700 border-red-200"
+        "color": "red"
       }
     ],
-    "focusRingColor": "orange-500"
+    "focusRingColor": "orange"
   },
   {
     "id": "es2025-module-c",
@@ -86,22 +86,22 @@
     "tags": [
       {
         "label": "full-stack",
-        "colorClass": "bg-purple-50 text-purple-700 border-purple-200"
+        "color": "purple"
       },
       {
         "label": "Next.js",
-        "colorClass": "bg-violet-50 text-violet-700 border-violet-200"
+        "color": "violet"
       },
       {
         "label": "PostgreSQL",
-        "colorClass": "bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200"
+        "color": "fuchsia"
       },
       {
         "label": "Stripe",
-        "colorClass": "bg-pink-50 text-pink-700 border-pink-200"
+        "color": "pink"
       }
     ],
-    "focusRingColor": "purple-500"
+    "focusRingColor": "purple"
   },
   {
     "id": "ws2024-cybersecurity",
@@ -112,22 +112,22 @@
     "tags": [
       {
         "label": "security",
-        "colorClass": "bg-red-50 text-red-700 border-red-200"
+        "color": "red"
       },
       {
         "label": "OWASP",
-        "colorClass": "bg-rose-50 text-rose-700 border-rose-200"
+        "color": "rose"
       },
       {
         "label": "penetration-testing",
-        "colorClass": "bg-pink-50 text-pink-700 border-pink-200"
+        "color": "pink"
       },
       {
         "label": "vulnerability",
-        "colorClass": "bg-orange-50 text-orange-700 border-orange-200"
+        "color": "orange"
       }
     ],
-    "focusRingColor": "red-500"
+    "focusRingColor": "red"
   },
   {
     "id": "es2025-module-d",
@@ -138,22 +138,21 @@
     "tags": [
       {
         "label": "data-viz",
-        "colorClass": "bg-indigo-50 text-indigo-700 border-indigo-200"
+        "color": "indigo"
       },
       {
         "label": "React",
-        "colorClass": "bg-blue-50 text-blue-700 border-blue-200"
+        "color": "blue"
       },
       {
         "label": "D3.js",
-        "colorClass": "bg-sky-50 text-sky-700 border-sky-200"
+        "color": "sky"
       },
       {
         "label": "real-time",
-        "colorClass": "bg-cyan-50 text-cyan-700 border-cyan-200"
+        "color": "cyan"
       }
     ],
-    "focusRingColor": "indigo-500"
+    "focusRingColor": "indigo"
   }
 ]
-

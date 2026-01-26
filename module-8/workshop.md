@@ -73,7 +73,7 @@ export interface Project {
   description: string;
   tags: Array<{
     label: string;
-    colorClass: string;
+    color: string;
   }>;
   focusRingColor: string;
 }
@@ -88,8 +88,8 @@ export interface Project {
 - **`description`** - Card description text
 - **`tags`** - Array of tag objects with:
   - `label` - Tag text (e.g., "backend")
-  - `colorClass` - Tailwind classes for colors (e.g., "bg-blue-50 text-blue-700 border-blue-200")
-- **`focusRingColor`** - Focus ring color (e.g., "blue-500")
+  - `color` - Color name (e.g., "blue", "green", "purple")
+- **`focusRingColor`** - Color name for focus ring (e.g., "blue", "green")
 
 ### Step 1.3: Create Projects JSON File
 
@@ -104,7 +104,7 @@ mkdir src/data
 # Mac/Linux: touch src/data/projects.json
 ```
 
-Add the projects array in JSON format:
+Add the projects array in JSON format. Notice how we're storing just the **color names** (like `"blue"`, `"green"`) instead of full Tailwind classes:
 
 ```json
 [
@@ -117,22 +117,22 @@ Add the projects array in JSON format:
     "tags": [
       {
         "label": "backend",
-        "colorClass": "bg-blue-50 text-blue-700 border-blue-200"
+        "color": "blue"
       },
       {
         "label": "server-side",
-        "colorClass": "bg-cyan-50 text-cyan-700 border-cyan-200"
+        "color": "cyan"
       },
       {
         "label": "MySQL",
-        "colorClass": "bg-sky-50 text-sky-700 border-sky-200"
+        "color": "sky"
       },
       {
         "label": "authentication",
-        "colorClass": "bg-purple-50 text-purple-700 border-purple-200"
+        "color": "purple"
       }
     ],
-    "focusRingColor": "blue-500"
+    "focusRingColor": "blue"
   },
   {
     "id": "es2025-module-a",
@@ -143,22 +143,22 @@ Add the projects array in JSON format:
     "tags": [
       {
         "label": "frontend",
-        "colorClass": "bg-green-50 text-green-700 border-green-200"
+        "color": "green"
       },
       {
         "label": "mobile",
-        "colorClass": "bg-emerald-50 text-emerald-700 border-emerald-200"
+        "color": "emerald"
       },
       {
         "label": "React Native",
-        "colorClass": "bg-teal-50 text-teal-700 border-teal-200"
+        "color": "teal"
       },
       {
         "label": "offline-first",
-        "colorClass": "bg-lime-50 text-lime-700 border-lime-200"
+        "color": "lime"
       }
     ],
-    "focusRingColor": "green-500"
+    "focusRingColor": "green"
   },
   {
     "id": "ws2024-cloud-computing",
@@ -169,22 +169,22 @@ Add the projects array in JSON format:
     "tags": [
       {
         "label": "DevOps",
-        "colorClass": "bg-orange-50 text-orange-700 border-orange-200"
+        "color": "orange"
       },
       {
         "label": "CI/CD",
-        "colorClass": "bg-amber-50 text-amber-700 border-amber-200"
+        "color": "amber"
       },
       {
         "label": "Kubernetes",
-        "colorClass": "bg-yellow-50 text-yellow-700 border-yellow-200"
+        "color": "yellow"
       },
       {
         "label": "Docker",
-        "colorClass": "bg-red-50 text-red-700 border-red-200"
+        "color": "red"
       }
     ],
-    "focusRingColor": "orange-500"
+    "focusRingColor": "orange"
   },
   {
     "id": "es2025-module-c",
@@ -195,22 +195,22 @@ Add the projects array in JSON format:
     "tags": [
       {
         "label": "full-stack",
-        "colorClass": "bg-purple-50 text-purple-700 border-purple-200"
+        "color": "purple"
       },
       {
         "label": "Next.js",
-        "colorClass": "bg-violet-50 text-violet-700 border-violet-200"
+        "color": "violet"
       },
       {
         "label": "PostgreSQL",
-        "colorClass": "bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200"
+        "color": "fuchsia"
       },
       {
         "label": "Stripe",
-        "colorClass": "bg-pink-50 text-pink-700 border-pink-200"
+        "color": "pink"
       }
     ],
-    "focusRingColor": "purple-500"
+    "focusRingColor": "purple"
   },
   {
     "id": "ws2024-cybersecurity",
@@ -221,22 +221,22 @@ Add the projects array in JSON format:
     "tags": [
       {
         "label": "security",
-        "colorClass": "bg-red-50 text-red-700 border-red-200"
+        "color": "red"
       },
       {
         "label": "OWASP",
-        "colorClass": "bg-rose-50 text-rose-700 border-rose-200"
+        "color": "rose"
       },
       {
         "label": "penetration-testing",
-        "colorClass": "bg-pink-50 text-pink-700 border-pink-200"
+        "color": "pink"
       },
       {
         "label": "vulnerability",
-        "colorClass": "bg-orange-50 text-orange-700 border-orange-200"
+        "color": "orange"
       }
     ],
-    "focusRingColor": "red-500"
+    "focusRingColor": "red"
   },
   {
     "id": "es2025-module-d",
@@ -247,25 +247,37 @@ Add the projects array in JSON format:
     "tags": [
       {
         "label": "data-viz",
-        "colorClass": "bg-indigo-50 text-indigo-700 border-indigo-200"
+        "color": "indigo"
       },
       {
         "label": "React",
-        "colorClass": "bg-blue-50 text-blue-700 border-blue-200"
+        "color": "blue"
       },
       {
         "label": "D3.js",
-        "colorClass": "bg-sky-50 text-sky-700 border-sky-200"
+        "color": "sky"
       },
       {
         "label": "real-time",
-        "colorClass": "bg-cyan-50 text-cyan-700 border-cyan-200"
+        "color": "cyan"
       }
     ],
-    "focusRingColor": "indigo-500"
+    "focusRingColor": "indigo"
   }
 ]
 ```
+
+#### 💡 Why Simple Color Names?
+
+Notice we're storing just `"blue"`, `"green"`, etc., instead of full Tailwind classes like `"bg-blue-50 text-blue-700 border-blue-200"`.
+
+**Benefits:**
+
+- 📦 **Cleaner data** - Easier to read and maintain
+- 🔄 **Flexibility** - Can change the color scheme without updating data
+- 🎨 **Dynamic generation** - We'll build the classes programmatically
+
+We'll learn how to generate the full Tailwind classes from these color names in the next task!
 
 ### Step 1.4: Verify the Files
 
@@ -275,7 +287,8 @@ Make sure you have:
 - ✅ `src/data/projects.json` with all 6 projects
 - ✅ Valid JSON syntax (use a JSON validator if needed)
 - ✅ Each project has a unique `id`
-- ✅ All tags have both `label` and `colorClass`
+- ✅ All tags have both `label` and `color` (not `colorClass`)
+- ✅ `focusRingColor` is a simple color name (not `"blue-500"`, just `"blue"`)
 
 ---
 
@@ -324,14 +337,16 @@ interface ProjectCardProps extends Project {
 Add the component function:
 
 ```tsx
-// Mapping object for focus ring colors (add at top of file, after imports)
+// Mapping object for focus ring colors
+// This is necessary because Tailwind's JIT compiler needs to see complete class names
+// Template literals like `focus:ring-${color}` won't work as Tailwind can't detect them at build time
 const focusRingClasses: Record<string, string> = {
-  "blue-500": "focus:ring-blue-500",
-  "green-500": "focus:ring-green-500",
-  "purple-500": "focus:ring-purple-500",
-  "orange-500": "focus:ring-orange-500",
-  "indigo-500": "focus:ring-indigo-500",
-  "red-500": "focus:ring-red-500",
+  blue: "focus:ring-blue-500",
+  green: "focus:ring-green-500",
+  purple: "focus:ring-purple-500",
+  orange: "focus:ring-orange-500",
+  indigo: "focus:ring-indigo-500",
+  red: "focus:ring-red-500",
 };
 
 export function ProjectCard({
@@ -350,9 +365,9 @@ export function ProjectCard({
     }
   };
 
-  // Get the complete focus ring class from the mapping
+  // Get the complete focus ring class from the mapping, fallback to blue-500
   const focusRingClass =
-    focusRingClasses[focusRingColor] || focusRingClasses["blue-500"];
+    focusRingClasses[focusRingColor] || focusRingClasses["blue"];
 
   return (
     <Card
@@ -376,7 +391,11 @@ export function ProjectCard({
         </p>
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <Badge key={tag.label} variant="outline" className={tag.colorClass}>
+            <Badge
+              key={tag.label}
+              variant="outline"
+              className={`bg-${tag.color}-50 text-${tag.color}-700 border-${tag.color}-200`}
+            >
               {tag.label}
             </Badge>
           ))}
@@ -386,6 +405,20 @@ export function ProjectCard({
   );
 }
 ```
+
+#### 💡 Important Note About Dynamic Classes
+
+Notice we're using template literals to generate classes dynamically:
+
+```tsx
+className={`bg-${tag.color}-50 text-${tag.color}-700 border-${tag.color}-200`}
+```
+
+**Save the file and check your browser** - you'll notice the tag colors are MISSING! 🤔
+
+**Why?** Tailwind's JIT (Just-In-Time) compiler can't detect dynamically generated classes. It scans your code for complete class names like `bg-blue-50` but can't recognize template literals that build classes at runtime.
+
+**Don't worry!** We'll fix this in the next step by configuring Tailwind's **safelist**.
 
 #### Component Breakdown
 
@@ -416,28 +449,32 @@ const handleKeyDown = (e: React.KeyboardEvent) => {
 
 **Dynamic Focus Ring:**
 
-We use a mapping object for focus ring colors (see code below). This is necessary because Tailwind's JIT compiler needs to see complete class names at build time. Template literals like `focus:ring-${color}` don't work!
+We use a mapping object for focus ring colors. This is necessary because Tailwind's JIT compiler needs to see complete class names at build time - template literals like `focus:ring-${color}` don't work!
 
 ```tsx
 const focusRingClasses: Record<string, string> = {
-  "blue-500": "focus:ring-blue-500",
-  "green-500": "focus:ring-green-500",
+  blue: "focus:ring-blue-500",
+  green: "focus:ring-green-500",
   // ...
 };
 const focusRingClass =
-  focusRingClasses[focusRingColor] || "focus:ring-blue-500";
+  focusRingClasses[focusRingColor] || focusRingClasses["blue"];
 ```
 
 - Uses the `focusRingColor` prop to look up the complete class name
 - Each card can have a different color
-- Falls back to blue-500 if the color isn't in the mapping
+- Falls back to blue if the color isn't in the mapping
 
-**Mapping Tags:**
+**Mapping Tags with Template Literals:**
 
 ```tsx
 {
   tags.map((tag) => (
-    <Badge key={tag.label} variant="outline" className={tag.colorClass}>
+    <Badge
+      key={tag.label}
+      variant="outline"
+      className={`bg-${tag.color}-50 text-${tag.color}-700 border-${tag.color}-200`}
+    >
       {tag.label}
     </Badge>
   ));
@@ -446,7 +483,142 @@ const focusRingClass =
 
 - Iterate over tags array
 - Each tag needs a unique `key` (using `label`)
-- Apply custom colors from data
+- **Dynamically generate Tailwind classes** from color names
+- **Problem**: These classes won't work yet! We need to configure Tailwind's safelist (next task)
+
+---
+
+## Task 3: Configure Tailwind Safelist for Dynamic Classes
+
+### Understanding the Problem
+
+When you checked your browser, you probably noticed the tags have NO COLORS. Why?
+
+**Tailwind's JIT Compiler:**
+
+- Scans your code at build time
+- Looks for complete class names like `bg-blue-50`
+- Cannot detect dynamically generated classes like `bg-${tag.color}-50`
+- Only includes classes it can find in the bundle
+
+**Example:**
+
+```tsx
+// ✅ This works - Tailwind sees "bg-blue-50"
+<div className="bg-blue-50">
+
+// ❌ This doesn't work - Tailwind can't detect it
+<div className={`bg-${color}-50`}>
+```
+
+### The Solution: Safelist
+
+Tailwind's `safelist` option tells the compiler: "Include these classes even if you can't find them in the code."
+
+### Step 3.1: Update Tailwind Config
+
+**Open** `tailwind.config.ts`:
+
+Add the `safelist` option with pattern matching:
+
+```typescript
+import type { Config } from "tailwindcss";
+
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  safelist: [
+    // Background colors for all Tailwind color scales
+    {
+      pattern:
+        /bg-(blue|cyan|sky|purple|green|emerald|teal|lime|orange|amber|yellow|red|rose|pink|violet|fuchsia|indigo)-50/,
+    },
+    // Text colors for all color scales
+    {
+      pattern:
+        /text-(blue|cyan|sky|purple|green|emerald|teal|lime|orange|amber|yellow|red|rose|pink|violet|fuchsia|indigo)-700/,
+    },
+    // Border colors for all color scales
+    {
+      pattern:
+        /border-(blue|cyan|sky|purple|green|emerald|teal|lime|orange|amber|yellow|red|rose|pink|violet|fuchsia|indigo)-200/,
+    },
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+} satisfies Config;
+```
+
+#### 🔍 How Safelist Patterns Work
+
+**Pattern syntax:**
+
+```typescript
+{
+  pattern: /bg-(blue|cyan|sky)-50/,
+}
+```
+
+- `/` - Regular expression delimiters
+- `bg-` - Fixed prefix
+- `(blue|cyan|sky)` - Match any of these color names (using `|` for "or")
+- `-50` - Fixed shade
+- This generates: `bg-blue-50`, `bg-cyan-50`, `bg-sky-50`
+
+**Why patterns instead of listing every class?**
+
+- 📦 Cleaner code - one pattern generates many classes
+- 🔧 Maintainable - add a new color by updating the pattern
+- 🎯 Precise - only includes the exact shades you need (50, 200, 700)
+
+### Step 3.2: Restart Dev Server
+
+**Important:** Tailwind config changes require a restart!
+
+```bash
+# Stop the dev server (Ctrl+C)
+# Then restart it
+npm run dev
+```
+
+### Step 3.3: Check Your Browser
+
+**Refresh the page** - your tags should now have beautiful colors! 🎨
+
+**What happened:**
+
+1. Tailwind read the safelist patterns
+2. Generated all matching color classes
+3. Included them in the CSS bundle
+4. Your template literals now work!
+
+### Step 3.4: Verify All Colors
+
+Check that all 6 project cards have colorful tags:
+
+- ✅ **Project 1**: Blue, cyan, sky, purple tags
+- ✅ **Project 2**: Green, emerald, teal, lime tags
+- ✅ **Project 3**: Orange, amber, yellow, red tags
+- ✅ **Project 4**: Purple, violet, fuchsia, pink tags
+- ✅ **Project 5**: Red, rose, pink, orange tags
+- ✅ **Project 6**: Indigo, blue, sky, cyan tags
+
+#### 💡 Key Takeaway
+
+**When to use safelist:**
+
+- ✅ Dynamic classes from data (like our tags)
+- ✅ User-generated content with custom colors
+- ✅ Theme systems with runtime color switching
+
+**When NOT to use safelist:**
+
+- ❌ Static classes you can write in your code
+- ❌ All possible Tailwind classes (huge bundle size!)
+- ❌ Classes you're not actually using
+
+**Best practice:** Only safelist the specific patterns you need!
 
 ### Step 2.5: Complete Component File
 
@@ -471,16 +643,16 @@ interface ProjectCardProps extends Project {
 // This is necessary because Tailwind's JIT compiler needs to see complete class names
 // Template literals like `focus:ring-${color}` won't work as Tailwind can't detect them at build time
 const focusRingClasses: Record<string, string> = {
-  "blue-500": "focus:ring-blue-500",
-  "green-500": "focus:ring-green-500",
-  "purple-500": "focus:ring-purple-500",
-  "orange-500": "focus:ring-orange-500",
-  "indigo-500": "focus:ring-indigo-500",
-  "red-500": "focus:ring-red-500",
-  "cyan-500": "focus:ring-cyan-500",
-  "pink-500": "focus:ring-pink-500",
-  "yellow-500": "focus:ring-yellow-500",
-  "teal-500": "focus:ring-teal-500",
+  blue: "focus:ring-blue-500",
+  green: "focus:ring-green-500",
+  purple: "focus:ring-purple-500",
+  orange: "focus:ring-orange-500",
+  indigo: "focus:ring-indigo-500",
+  red: "focus:ring-red-500",
+  cyan: "focus:ring-cyan-500",
+  pink: "focus:ring-pink-500",
+  yellow: "focus:ring-yellow-500",
+  teal: "focus:ring-teal-500",
 };
 
 export function ProjectCard({
@@ -499,9 +671,9 @@ export function ProjectCard({
     }
   };
 
-  // Get the complete focus ring class from the mapping, fallback to blue-500
+  // Get the complete focus ring class from the mapping, fallback to blue
   const focusRingClass =
-    focusRingClasses[focusRingColor] || focusRingClasses["blue-500"];
+    focusRingClasses[focusRingColor] || focusRingClasses["blue"];
 
   return (
     <Card
@@ -538,7 +710,7 @@ export function ProjectCard({
 
 ---
 
-## Task 3: Use the Component in App.tsx
+## Task 4: Use the Component in App.tsx
 
 Now let's replace all the hard-coded cards with our new component!
 
@@ -674,7 +846,7 @@ Save all files and check your browser:
 
 ---
 
-## Task 4: Understanding What We Built
+## Task 5: Understanding What We Built
 
 Let's review the architecture and benefits of our refactoring.
 
@@ -790,7 +962,7 @@ Want to add a new project? Just add data to the JSON file:
 
 ---
 
-## Task 5: Commit Your Work
+## Task 6: Commit Your Work
 
 Excellent work on this major refactoring! Let's save your progress.
 
@@ -1070,20 +1242,20 @@ Tailwind's JIT (Just-In-Time) compiler scans your source code for **complete cla
 className={`focus:ring-${focusRingColor}`}  // ❌ Won't work!
 ```
 
-Even though `focusRingColor` is "blue-500", Tailwind can't detect `focus:ring-blue-500` because it only sees the template literal pattern, not the interpolated result.
+Even though `focusRingColor` is "blue", Tailwind can't detect `focus:ring-blue-500` because it only sees the template literal pattern, not the interpolated result.
 
 **The Solution:**
 We use a mapping object with all complete class names:
 
 ```tsx
 const focusRingClasses: Record<string, string> = {
-  "blue-500": "focus:ring-blue-500",
-  "green-500": "focus:ring-green-500",
+  blue: "focus:ring-blue-500",
+  green: "focus:ring-green-500",
   // ... etc
 };
 
 const focusRingClass =
-  focusRingClasses[focusRingColor] || focusRingClasses["blue-500"];
+  focusRingClasses[focusRingColor] || focusRingClasses["blue"];
 ```
 
 This way, Tailwind sees all the complete class names and includes them in the build.
