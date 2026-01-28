@@ -106,7 +106,7 @@ function App() {
 export default App;
 ```
 
-Ha nagy kék félkövér szöveget látsz, a Tailwind működik! ✅
+Ha nagy kék félkövér szöveget látsz, a Tailwind működik!
 
 ---
 
@@ -150,7 +150,7 @@ import App from "./App.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
 );
 ```
 
@@ -188,13 +188,13 @@ export default App;
 
 **Bontsuk fel ezeket az osztályokat:**
 
-| Osztály            | Mit csinál                                   |
-| ------------------ | -------------------------------------------- |
-| `min-h-screen`     | Minimum magasság 100vh (teljes viewport magasság) |
-| `flex`             | Engedélyezi a flexboxot                      |
-| `items-center`     | Függőlegesen középre igazítja a gyerekeket (cross-axis) |
-| `justify-center`   | Vízszintesen középre igazítja a gyerekeket (main-axis) |
-| `bg-gray-50`       | Világosszürke háttérszín                     |
+| Osztály          | Mit csinál                                              |
+| ---------------- | ------------------------------------------------------- |
+| `min-h-screen`   | Minimum magasság 100vh (teljes viewport magasság)       |
+| `flex`           | Engedélyezi a flexboxot                                 |
+| `items-center`   | Függőlegesen középre igazítja a gyerekeket (cross-axis) |
+| `justify-center` | Vízszintesen középre igazítja a gyerekeket (main-axis)  |
+| `bg-gray-50`     | Világosszürke háttérszín                                |
 
 Most már látnod kellene a "Card will go here" szöveget egy világosszürke háttéren középre igazítva.
 
@@ -231,43 +231,43 @@ export default App;
 
 **Container osztályok:**
 
-| Osztály             | Mit csinál                          |
-| ------------------- | ----------------------------------- |
-| `max-w-md`          | Maximum szélesség 28rem (448px)     |
-| `p-6`               | Padding 1.5rem (24px) minden oldalon |
-| `bg-white`          | Fehér háttér                        |
-| `rounded-lg`        | Nagy border radius (8px)            |
-| `border`            | 1px szilárd szegély                 |
-| `border-gray-200`   | Világosszürke szegélyszín           |
-| `shadow-lg`         | Nagy box shadow mélységhez          |
+| Osztály           | Mit csinál                           |
+| ----------------- | ------------------------------------ |
+| `max-w-md`        | Maximum szélesség 28rem (448px)      |
+| `p-6`             | Padding 1.5rem (24px) minden oldalon |
+| `bg-white`        | Fehér háttér                         |
+| `rounded-lg`      | Nagy border radius (8px)             |
+| `border`          | 1px szilárd szegély                  |
+| `border-gray-200` | Világosszürke szegélyszín            |
+| `shadow-lg`       | Nagy box shadow mélységhez           |
 
 **Cím osztályok:**
 
-| Osztály           | Mit csinál                       |
-| ----------------- | -------------------------------- |
-| `text-xl`         | Betűméret 1.25rem (20px)         |
-| `font-bold`       | Betűsúly 700                     |
-| `text-gray-900`   | Nagyon sötétszürke szöveg (majdnem fekete) |
+| Osztály         | Mit csinál                                 |
+| --------------- | ------------------------------------------ |
+| `text-xl`       | Betűméret 1.25rem (20px)                   |
+| `font-bold`     | Betűsúly 700                               |
+| `text-gray-900` | Nagyon sötétszürke szöveg (majdnem fekete) |
 
 **Leírás osztályok:**
 
-| Osztály           | Mit csinál                 |
-| ----------------- | -------------------------- |
-| `mt-3`            | Margin-top 0.75rem (12px)  |
-| `text-sm`         | Betűméret 0.875rem (14px)  |
-| `text-gray-600`   | Közepes szürke szöveg      |
+| Osztály         | Mit csinál                |
+| --------------- | ------------------------- |
+| `mt-3`          | Margin-top 0.75rem (12px) |
+| `text-sm`       | Betűméret 0.875rem (14px) |
+| `text-gray-600` | Közepes szürke szöveg     |
 
 ### Step 5.3: Eredmény ellenőrzése
 
 A böngésződnek most egy szép kártyát kellene megjelenítenie:
 
-- ✅ Fehér háttér
-- ✅ Lekerekített sarkok
-- ✅ Finom szürke szegély
-- ✅ Árnyék mélységhez
-- ✅ Félkövér cím
-- ✅ Halvány leírás szöveg
-- ✅ Szürke háttéren középre igazítva
+- Fehér háttér
+- Lekerekített sarkok
+- Finom szürke szegély
+- Árnyék mélységhez
+- Félkövér cím
+- Halvány leírás szöveg
+- Szürke háttéren középre igazítva
 
 ---
 
@@ -428,15 +428,15 @@ Ez a **feature branch workflow**, amelyet professzionális csapatok használnak!
 
 ---
 
-## 🎉 Gratulálunk!
+## Gratulálunk!
 
 Befejezted a Module 1-et! Most már van:
 
-1. ✅ Egy működő Vite + React + TypeScript projekt
-2. ✅ Tailwind CSS telepítve és konfigurálva
-3. ✅ Egy szépen stílusozott kártya komponens
-4. ✅ Megértés az alapvető Tailwind utility osztályokról
-5. ✅ Projekt verziókezelés alatt Git & GitHub-bal
+1. Egy működő Vite + React + TypeScript projekt
+2. Tailwind CSS telepítve és konfigurálva
+3. Egy szépen stílusozott kártya komponens
+4. Megértés az alapvető Tailwind utility osztályokról
+5. Projekt verziókezelés alatt Git & GitHub-bal
 
 ## Kihívás gyakorlatok (Opcionális)
 

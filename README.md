@@ -6,7 +6,7 @@ A hands-on, step-by-step tutorial for learning **Tailwind CSS** and **ShadCN UI*
 
 ![MITS Tailwind CSS & ShadCN UI Tutorial](/assets/images/course-cover-image.webp)
 
-## 🎯 What You'll Build
+## What You'll Build
 
 A responsive MITS Project Dashboard that displays project cards with:
 
@@ -21,7 +21,7 @@ A responsive MITS Project Dashboard that displays project cards with:
 
 ![MITS Tailwind CSS & ShadCN UI Tutorial](/assets/images/course-solution.webp)
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Vite** - Fast build tool and development server
 - **React 18** - UI library
@@ -29,7 +29,7 @@ A responsive MITS Project Dashboard that displays project cards with:
 - **Tailwind CSS v4** - Utility-first CSS framework
 - **ShadCN UI** - Accessible component library (Module 4+)
 
-## 📚 Tutorial Structure
+## Tutorial Structure
 
 ### Completed Modules
 
@@ -46,11 +46,11 @@ A responsive MITS Project Dashboard that displays project cards with:
 | [Module 9](./module-9/)   | Theme Toggle - Dark Mode   | React Context, dark mode, localStorage, system preferences, theme persistence   |
 | [Module 10](./module-10/) | Real Data Transformation   | Data transformation, flag emojis, dynamic colors, complex JSON, production data |
 
-### All Modules Complete! 🎉
+### All Modules Complete!
 
 The full 10-module tutorial is now complete, covering everything from project setup to production-ready data transformation!
 
-## 🎓 Learning Philosophy
+## Learning Philosophy
 
 This tutorial follows a **UI-first, visual-first approach**:
 
@@ -60,7 +60,7 @@ This tutorial follows a **UI-first, visual-first approach**:
 4. **Understand before abstracting** - Learn Tailwind fundamentals before using component libraries
 5. **Professional practices** - Git workflow, version control, best practices
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -80,14 +80,13 @@ This tutorial follows a **UI-first, visual-first approach**:
    ```
 
 2. **Start with Module 1:**
-
    - Read [`module-1/overview.md`](./module-1/overview.md)
    - Follow [`module-1/workshop.md`](./module-1/workshop.md)
    - Check your solution against `module-1/solution/`
 
 3. **Continue progressively through modules** (All 10 modules complete!)
 
-## 📖 How to Use This Tutorial
+## How to Use This Tutorial
 
 Each module contains:
 
@@ -108,39 +107,39 @@ module-X/
 4. **Compare with solution** - Check your work against the provided solution
 5. **Commit your work** - Use Git to track your progress
 
-## 🎨 What Makes This Tutorial Different
+## What Makes This Tutorial Different
 
-- ✅ **Tailwind CSS v4** - Uses the latest version with Vite plugin
-- ✅ **Color exploration** - Dedicated module for understanding color systems
-- ✅ **Typography focus** - Learn professional text hierarchy
-- ✅ **ShadCN integration** - Practical transition from hand-built to component library
-- ✅ **Accessibility first** - Keyboard navigation, focus states, WCAG compliance
-- ✅ **Git workflow** - Learn professional version control practices
-- ✅ **Progressive learning** - Each module builds on the previous
-- ✅ **Hands-on experiments** - Try variations and see immediate results
+- **Tailwind CSS v4** - Uses the latest version with Vite plugin
+- **Color exploration** - Dedicated module for understanding color systems
+- **Typography focus** - Learn professional text hierarchy
+- **ShadCN integration** - Practical transition from hand-built to component library
+- **Accessibility first** - Keyboard navigation, focus states, WCAG compliance
+- **Git workflow** - Learn professional version control practices
+- **Progressive learning** - Each module builds on the previous
+- **Hands-on experiments** - Try variations and see immediate results
 
-## 🤝 Contributing
+## Contributing
 
 This tutorial is part of the MITS Pilot program. If you find issues or have suggestions:
 
 1. Open an issue describing the problem or suggestion
 2. For fixes, submit a pull request with clear descriptions
 
-## 📝 License
+## License
 
 This project is part of the Marketable IT Skills initiative.
 
-## 🔗 Resources
+## Resources
 
 - [Tailwind CSS Documentation](https://tailwindcss.com)
 - [ShadCN UI Documentation](https://ui.shadcn.com)
 - [Vite Documentation](https://vitejs.dev)
 - [React Documentation](https://react.dev)
 
-## 💬 Support
+## Support
 
 For questions or support, please open an issue in this repository.
 
 ---
 
-**Part of the [Marketable IT Skills (MITS)](https://github.com/marketable-it-skills) initiative** 🚀
+**Part of the [Marketable IT Skills (MITS)](https://github.com/marketable-it-skills) initiative**

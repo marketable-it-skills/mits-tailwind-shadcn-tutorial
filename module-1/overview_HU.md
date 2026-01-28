@@ -93,7 +93,7 @@ A modul elkezdése előtt győződj meg róla, hogy rendelkezel:
 
 ## Időbecslés
 
-⏱️ **30-45 perc**
+**30-45 perc**
 
 ## Modul struktúra
 
@@ -117,4 +117,4 @@ Egyetlen kártya a képernyő közepén:
 - Szürke oldal háttér
 
 ![Várható eredmény](assets/project-description-images/module-1-solution.png)
-Kezdjük el! 🚀
+Kezdjük el!

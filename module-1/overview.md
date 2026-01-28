@@ -93,7 +93,7 @@ Before starting this module, ensure you have:
 
 ## Time Estimate
 
-⏱️ **30-45 minutes**
+**30-45 minutes**
 
 ## Module Structure
 
@@ -117,4 +117,4 @@ A single card centered on the screen with:
 - Gray page background
 
 ![Expected Result](assets/project-description-images/module-1-solution.png)
-Let's get started! 🚀
+Let's get started!

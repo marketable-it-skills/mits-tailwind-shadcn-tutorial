@@ -6,7 +6,7 @@ Egy praktikus, lépésről lépésre tutorialt a **Tailwind CSS** és **ShadCN U
 
 ![MITS Tailwind CSS & ShadCN UI Tutorial](/assets/images/course-cover-image.webp)
 
-## 🎯 Mit fogsz építeni
+## Mit fogsz építeni
 
 Egy responsive MITS Project Dashboard projektkártyákkal, amely tartalmazza:
 
@@ -21,7 +21,7 @@ Egy responsive MITS Project Dashboard projektkártyákkal, amely tartalmazza:
 
 ![MITS Tailwind CSS & ShadCN UI Tutorial](/assets/images/course-solution.webp)
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Vite** - Gyors build eszköz és fejlesztői szerver
 - **React 18** - Felhasználói felület könyvtár
@@ -29,28 +29,28 @@ Egy responsive MITS Project Dashboard projektkártyákkal, amely tartalmazza:
 - **Tailwind CSS v4** - Utility-alapú CSS keretrendszer
 - **ShadCN UI** - Akadálymentes komponens könyvtár (Module 4+)
 
-## 📚 Tutorial Struktúra
+## Tutorial Struktúra
 
 ### Befejezett Modulok
 
-| Module                    | Fókusz                      | Mit fogsz tanulni                                                               |
-| ------------------------- | -------------------------- | ------------------------------------------------------------------------------- |
-| [Module 1](./module-1/)   | Project Setup & First Card | Vite setup, Tailwind v4 konfiguráció, alapvető card komponens, Git workflow       |
-| [Module 2](./module-2/)   | Color Exploration          | Tailwind színrendszer, light/dark/colored témák, responsive layout             |
-| [Module 3](./module-3/)   | Typography & Spacing       | Font méretek, súlyok, line heightek, szöveg hierarchia, spacing utilityk            |
-| [Module 4](./module-4/)   | Introducing ShadCN UI      | Komponens könyvtárak, ShadCN setup, Card komponensek, szemantikus theming            |
-| [Module 5](./module-5/)   | Badges & Tags              | ShadCN Badge komponens, variantok, egyedi színek, komponens kompozíció          |
-| [Module 6](./module-6/)   | Card Interactions          | Hover effektek, transitionök, click handlerek, billentyűzetes vezérlés, focus ringek |
-| [Module 7](./module-7/)   | Responsive Grid Layout     | CSS Grid, responsive breakpointok, mobile-first design, container patternök       |
-| [Module 8](./module-8/)   | Komponens Props            | Újrahasznosítható komponensek, TypeScript interfacek, props, array mapping, refactoring   |
-| [Module 9](./module-9/)   | Theme Toggle - Dark Mode   | React Context, dark mode, localStorage, rendszer preferenciák, theme perzisztencia   |
-| [Module 10](./module-10/) | Real Data Transformation   | Adat transzformáció, flag emojik, dinamikus színek, komplex JSON, production adatok |
+| Module                    | Fókusz                     | Mit fogsz tanulni                                                                       |
+| ------------------------- | -------------------------- | --------------------------------------------------------------------------------------- |
+| [Module 1](./module-1/)   | Project Setup & First Card | Vite setup, Tailwind v4 konfiguráció, alapvető card komponens, Git workflow             |
+| [Module 2](./module-2/)   | Color Exploration          | Tailwind színrendszer, light/dark/colored témák, responsive layout                      |
+| [Module 3](./module-3/)   | Typography & Spacing       | Font méretek, súlyok, line heightek, szöveg hierarchia, spacing utilityk                |
+| [Module 4](./module-4/)   | Introducing ShadCN UI      | Komponens könyvtárak, ShadCN setup, Card komponensek, szemantikus theming               |
+| [Module 5](./module-5/)   | Badges & Tags              | ShadCN Badge komponens, variantok, egyedi színek, komponens kompozíció                  |
+| [Module 6](./module-6/)   | Card Interactions          | Hover effektek, transitionök, click handlerek, billentyűzetes vezérlés, focus ringek    |
+| [Module 7](./module-7/)   | Responsive Grid Layout     | CSS Grid, responsive breakpointok, mobile-first design, container patternök             |
+| [Module 8](./module-8/)   | Komponens Props            | Újrahasznosítható komponensek, TypeScript interfacek, props, array mapping, refactoring |
+| [Module 9](./module-9/)   | Theme Toggle - Dark Mode   | React Context, dark mode, localStorage, rendszer preferenciák, theme perzisztencia      |
+| [Module 10](./module-10/) | Real Data Transformation   | Adat transzformáció, flag emojik, dinamikus színek, komplex JSON, production adatok     |
 
-### Minden Modul Kész! 🎉
+### Minden Modul Kész!
 
 A teljes 10 modulból álló tutorial most már kész, mindent lefed a projekt setup-tól a production-ready adat transzformációig!
 
-## 🎓 Tanulási Filozófia
+## Tanulási Filozófia
 
 Ez a tutorial egy **UI-first, visual-first megközelítést** követ:
 
@@ -60,7 +60,7 @@ Ez a tutorial egy **UI-first, visual-first megközelítést** követ:
 4. **Értsd meg mielőtt absztrakciókat használsz** - Tanuld meg a Tailwind alapokat, mielőtt komponens könyvtárakat használnál
 5. **Professzionális gyakorlatok** - Git workflow, verziókezelés, best practicek
 
-## 🚀 Kezdés
+## Kezdés
 
 ### Előfeltételek
 
@@ -80,14 +80,13 @@ Ez a tutorial egy **UI-first, visual-first megközelítést** követ:
    ```
 
 2. **Kezdd a Module 1-gyel:**
-
    - Olvasd el a [`module-1/overview.md`](./module-1/overview.md) fájlt
    - Kövesd a [`module-1/workshop.md`](./module-1/workshop.md) útmutatást
    - Hasonlítsd össze a megoldásodat a `module-1/solution/` mappával
 
 3. **Folytasd progresszíven a modulokkal** (Mind a 10 modul kész!)
 
-## 📖 Hogyan használd ezt a tutorialt
+## Hogyan használd ezt a tutorialt
 
 Minden modul tartalmazza:
 
@@ -108,39 +107,39 @@ module-X/
 4. **Hasonlítsd össze a megoldással** - Ellenőrizd a munkádat a biztosított megoldással
 5. **Commitold a munkádat** - Használd a Git-et a haladásod követéséhez
 
-## 🎨 Mi teszi ezt a tutorialt különlegessé
+## Mi teszi ezt a tutorialt különlegessé
 
-- ✅ **Tailwind CSS v4** - A legújabb verziót használja Vite pluginnal
-- ✅ **Színfelfedezés** - Dedicált modul a színrendszerek megértéséhez
-- ✅ **Tipográfia fókusz** - Tanulj professzionális szöveg hierarchiát
-- ✅ **ShadCN integráció** - Gyakorlati átmenet kézzel építettről komponens könyvtárra
-- ✅ **Accessibility first** - Billentyűzettel való navigáció, focus állapotok, WCAG megfelelőség
-- ✅ **Git workflow** - Tanulj professzionális verziókezelési gyakorlatokat
-- ✅ **Progresszív tanulás** - Minden modul az előzőre épül
-- ✅ **Praktikus kísérletek** - Próbálj variációkat és láss azonnali eredményeket
+- **Tailwind CSS v4** - A legújabb verziót használja Vite pluginnal
+- **Színfelfedezés** - Dedicált modul a színrendszerek megértéséhez
+- **Tipográfia fókusz** - Tanulj professzionális szöveg hierarchiát
+- **ShadCN integráció** - Gyakorlati átmenet kézzel építettről komponens könyvtárra
+- **Accessibility first** - Billentyűzettel való navigáció, focus állapotok, WCAG megfelelőség
+- **Git workflow** - Tanulj professzionális verziókezelési gyakorlatokat
+- **Progresszív tanulás** - Minden modul az előzőre épül
+- **Praktikus kísérletek** - Próbálj variációkat és láss azonnali eredményeket
 
-## 🤝 Közreműködés
+## Közreműködés
 
 Ez a tutorial a MITS Pilot program része. Ha problémákat találsz vagy van javaslatod:
 
 1. Nyiss egy issue-t a probléma vagy javaslat leírásával
 2. Javítások esetén küldj be egy pull requestet egyértelmű leírással
 
-## 📝 Licenc
+## Licenc
 
 Ez a projekt a Marketable IT Skills kezdeményezés része.
 
-## 🔗 Erőforrások
+## Erőforrások
 
 - [Tailwind CSS Dokumentáció](https://tailwindcss.com)
 - [ShadCN UI Dokumentáció](https://ui.shadcn.com)
 - [Vite Dokumentáció](https://vitejs.dev)
 - [React Dokumentáció](https://react.dev)
 
-## 💬 Támogatás
+## Támogatás
 
 Kérdések vagy támogatás esetén kérlek nyiss egy issue-t ebben a repositoryban.
 
 ---
 
-**A [Marketable IT Skills (MITS)](https://github.com/marketable-it-skills) kezdeményezés része** 🚀
+**A [Marketable IT Skills (MITS)](https://github.com/marketable-it-skills) kezdeményezés része**

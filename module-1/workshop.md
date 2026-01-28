@@ -106,7 +106,7 @@ function App() {
 export default App;
 ```
 
-If you see large blue bold text, Tailwind is working! ✅
+If you see large blue bold text, Tailwind is working!
 
 ---
 
@@ -150,7 +150,7 @@ import App from "./App.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
 );
 ```
 
@@ -261,13 +261,13 @@ export default App;
 
 Your browser should now display a beautiful card with:
 
-- ✅ White background
-- ✅ Rounded corners
-- ✅ Subtle gray border
-- ✅ Shadow for depth
-- ✅ Bold title
-- ✅ Muted description text
-- ✅ Centered on a gray background
+- White background
+- Rounded corners
+- Subtle gray border
+- Shadow for depth
+- Bold title
+- Muted description text
+- Centered on a gray background
 
 ---
 
@@ -428,15 +428,15 @@ This is the **feature branch workflow** used in professional teams!
 
 ---
 
-## 🎉 Congratulations!
+## Congratulations!
 
 You've completed Module 1! You now have:
 
-1. ✅ A working Vite + React + TypeScript project
-2. ✅ Tailwind CSS installed and configured
-3. ✅ A beautifully styled card component
-4. ✅ Understanding of basic Tailwind utility classes
-5. ✅ Project under version control with Git & GitHub
+1. A working Vite + React + TypeScript project
+2. Tailwind CSS installed and configured
+3. A beautifully styled card component
+4. Understanding of basic Tailwind utility classes
+5. Project under version control with Git & GitHub
 
 ## Challenge Exercises (Optional)
 
