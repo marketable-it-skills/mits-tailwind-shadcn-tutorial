@@ -87,7 +87,6 @@ Vite creates two TypeScript config files. We need to update both:
     }
   ],
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
@@ -101,8 +100,6 @@ Vite creates two TypeScript config files. We need to update both:
 {
   "compilerOptions": {
     // ... your existing options ...
-
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
